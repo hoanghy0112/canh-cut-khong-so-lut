@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
+interface IProfile {
+	photoURL?: string | null;
+	displayName?: string | null;
+	email?: string | null;
+	uid?: string | null;
+	isPending: boolean;
+	isAuthenticated: boolean;
+}
+
 export default function useProfileInformation() {
-	const [profile, setProfile] = useState({
+	const [profile, setProfile] = useState<IProfile>({
 		isPending: true,
 		isAuthenticated: false,
 	});
