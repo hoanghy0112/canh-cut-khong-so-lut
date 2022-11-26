@@ -1,23 +1,32 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import AuthenticationPage from '../pages/AuthenticationPage';
-import HomePage from '../pages/HomePage/HomePage';
-import TestPage from '../pages/TestPage_khang/khangTest';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AuthenticationPage from "../pages/AuthenticationPage";
+// import Info from '../components/UserProfile/Info';
+import HomePage from "../pages/HomePage/HomePage";
+import ItemPage from "../pages/ItemPage/ItemPage";
+
+import QDTestPage from "../pages/QDTstPage";
 
 const router = createBrowserRouter([
-  {
-    path: '',
-    element: <AuthenticationPage />,
-  },
-  {
-    path: 'home',
-    element: <HomePage />,
-  },
-  {
-    path: 'test',
-    element: <TestPage />,
-  },
+	{
+		path: "",
+		element: <HomePage />,
+		children: [
+			{
+				path: "item",
+				element: <ItemPage />,
+			},
+			{
+				path: "suggestion",
+				element: <ItemPage />,
+			},
+		],
+	},
+	{
+		path: "authentication",
+		element: <AuthenticationPage />,
+	},
 ]);
 
 export default function MainRouter() {
-  return <RouterProvider router={router} />;
+	return <RouterProvider router={router} />;
 }
