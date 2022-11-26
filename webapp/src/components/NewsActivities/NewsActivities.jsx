@@ -23,7 +23,7 @@ const NewsActivities = () => {
 		if (
 			myActivities.indexOf(
 				myActivities.find((act) => act.title == data.title)
-			) !== -1
+			) === -1
 		) {
 			dispatch(addScore(data.score));
 			openNotify();
@@ -59,7 +59,14 @@ const NewsActivities = () => {
 								<img src={data.thumbnail}></img>
 							</div>
 							<div
-								className={[styles.join, styles.disabled].join(" ")}
+								className={[
+									styles.join,
+									myActivities.indexOf(
+										myActivities.find(
+											(act) => act.title == data.title
+										)
+									) !== -1 && styles.disabled,
+								].join(" ")}
 								style={{}}
 								onClick={() => handleClick(data)}
 								disabled
