@@ -30,7 +30,7 @@ export default function AuthenticationPage() {
         <div className={styles.authenticationTab}>
           <div className={styles.header}>
             <p>Welcome to</p>
-            <p className={styles.appName}>The more the merrier</p>
+            <p className={styles.appName}>EVNGuins</p>
           </div>
           <div className={styles.signInContainer}>
             <div className={styles.signInButtons}>
