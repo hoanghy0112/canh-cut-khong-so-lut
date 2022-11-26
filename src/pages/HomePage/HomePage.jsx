@@ -57,13 +57,6 @@ const HomePage = () => {
 							}}
 						/>
 						<TabButton
-							isSelected={tab === "usedplastic"}
-							type="UsedPlastic"
-							onClick={() => {
-								navigate("/usedplastic");
-							}}
-						/>
-						<TabButton
 							isSelected={tab === "item"}
 							type="Item"
 							onClick={() => {
