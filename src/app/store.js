@@ -2,17 +2,17 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-// import userManagementReducer from "../features/userManagement/ProfileSlice";
+import taskReducer from "../features/task/taskSlice";
 
 export const store = configureStore({
 	reducer: {
-		// userManagement: persistReducer(
-		// 	{
-		// 		key: "userManagement",
-		// 		storage,
-		// 	},
-		// 	userManagementReducer
-		// ),
+		taskManagement: persistReducer(
+			{
+				key: "taskManagement",
+				storage,
+			},
+			taskReducer
+		),
 	},
 });
 
