@@ -2,9 +2,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-param-reassign */
 import { createSlice } from "@reduxjs/toolkit";
-import { getAuth } from "firebase/auth";
-import { doc, setDoc, getDoc } from "firebase/firestore";
-import { USERS } from "../../constants/dbTable";
+import updateScoreInFirebase from "./scoreFirebase";
 
 const initialState = {
 	score: 0,
@@ -18,11 +16,15 @@ export const scoreManagementSlice = createSlice({
 			const score = action.payload;
 
 			state.score += score;
+
+			updateScoreInFirebase(score);
 		},
 		reduceScore: (state, action) => {
 			const score = action.payload;
 
 			state.score -= score;
+
+			updateScoreInFirebase(score);
 		},
 	},
 });
