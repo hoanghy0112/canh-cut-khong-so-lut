@@ -37,6 +37,15 @@
     flex-direction: column;
     gap: 50px;
     overflow: scroll;
+    .img-wrappper {
+      width: 150px;
+      background-color: black;
+      height: 130px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
 
     .voucher {
     }
@@ -80,7 +89,7 @@
           2px 3px 10px rgba(37, 158, 115, 0.25);
         border: none;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: 10px;
         color: #ffffff;
         &:hover {
           background: #025437;
