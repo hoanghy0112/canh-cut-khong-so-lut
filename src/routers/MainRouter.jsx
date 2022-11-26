@@ -6,7 +6,7 @@ import ItemPage from "../pages/ItemPage/ItemPage";
 import SuggestionPage from "../pages/SuggestionPage/SuggestionPage";
 import UsedPlasticPage from "../pages/UsedPlasticPage/UsedPlasticPage";
 
-import QDTestPage from '../pages/QDTstPage';
+import QDTestPage from "../pages/QDTstPage";
 
 const router = createBrowserRouter([
 	{
