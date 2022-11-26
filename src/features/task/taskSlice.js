@@ -72,17 +72,17 @@ const initialState = {
 		},
 		{
 			time: {
-				from: new Date("2022-12-26T13:00:00"),
-				to: new Date("2022-12-26T15:15:00"),
+				from: new Date("2022-12-26T8:00:00"),
+				to: new Date("2022-12-26T10:15:00"),
 			},
-			title: "Cơ sở dữ liệu",
+			title: "Học thêm anh văn",
 		},
 		{
 			time: {
-				from: new Date("2022-12-25T13:00:00"),
-				to: new Date("2022-12-25T15:15:00"),
+				from: new Date("2022-12-27T13:00:00"),
+				to: new Date("2022-12-27T18:00:00"),
 			},
-			title: "Cơ sở dữ liệu",
+			title: "Đi chơi",
 		},
 	],
 	status: "idle",

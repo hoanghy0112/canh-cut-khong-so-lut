@@ -38,6 +38,33 @@ const initData = [
 		organization: 'Đoàn thanh niên - Hội sinh viên, trường Đại học Công Nghệ Thông Tin',
 		content: 'Chào mừng 91 năm ngày thành lập Đoàn TNCS Hồ Chí (26/3/1931 - 26/3/2022), Chào mừng tháng Thanh năm 2022. Chương trình tình nguyện UIT Green 2022 nhằm mang lại những cảnh quan xanh tại UIT do chính sinh viên UIT thực hiện để tăng cường tinh thần bảo vệ môi trường và phát huy tinh thần tình nguyện xung kích của sinh viên Trường.',
 		thumbnail: 'https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/275562319_4901651603260674_7028156447893836524_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=DvwfLhdzddwAX8W5QsD&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfDNgjSHVmXcNAXBmUJHn0OIBd6qbBLRl0BFFuPPncX-pQ&oe=6387A802'
+	},
+	{
+		title: '🌍 THƯ MỜI THAM GIA HOẠT ĐỘNG NHẶT RÁC CUỐI TUẦN 🌍',
+		date: new Date('2022-11-27T00:00:00'),
+		from: new Date('2022-11-27T08:00:00'),
+		to: new Date('2022-11-27T12:00:00'),
+		organization: 'Chúng Thanh Niên Phật Tử Phật Quang',
+		content: 'Nhằm đem lại nguồn năng lượng tích cực sau ngày thứ sáu đen tối (Black Friday) và lan tỏa hình ảnh người Việt Nam văn minh, nói không với rác thải, Hội Yêu Rác tại Hàn Quốc thân mời các bạn trẻ cùng tham gia chương trình nhặt rác vào cuối tuần này nhé ạ! 🍀 Vì lợi ích của hành động nhỏ sẽ mang lại ý nghĩa lớn không chỉ với cá nhân mà còn giúp mọi người sống trong một môi trường trong lành, các bạn nhớ rủ thêm bạn bè và người thân của mình cùng tham gia nhé!',
+		thumbnail: 'https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/316681117_665702414995595_2405755193679234883_n.jpg?stp=dst-jpg_p843x403&_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=0eR9o-av1esAX8FOLZ0&_nc_ht=scontent.fsgn2-8.fna&oh=00_AfCiF8ovSVg6wx0KfurwbO7qdtChQOfNB7OzeCQ1g4BL2g&oe=63879FE9'
+	},
+	{
+		title: '🌍 RÁC VÀ TÌNH YÊU 🌍',
+		date: new Date('2022-11-27T00:00:00'),
+		from: new Date('2022-11-27T19:00:00'),
+		to: new Date('2022-11-27T20:00:00'),
+		organization: 'Hội Yêu Rác, Đoàn Khoa Thư viện - Thông tin học, trường Đại học KHXH&NV',
+		content: 'Sự kiện nhặt rác đầy thú vị và cảm hứng sẽ được tổ chức bởi sự kết hợp từ Hội Yêu Rác, Đoàn Khoa Thư viện - Thông tin học, trường Đại học KHXH&NV và Ban sinh viên Xung Kích khoa Kỹ Thuật Xây Dựng, trường Đại Học Bách Khoa.',
+		thumbnail: 'https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/316938311_3243963212523411_2576478278513281043_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=ZtZ254KyF0kAX_o5FUx&_nc_ht=scontent.fsgn2-3.fna&oh=00_AfDuVVCHV9_n4wuxqIcuyw_z6OYU8WZVf0_jF2_giBisRQ&oe=63871324'
+	},
+	{
+		title: 'WECHANGE - CHANGE FOR GREEN',
+		date: new Date('2022-11-26T00:00:00'),
+		from: new Date('2022-11-26T15:00:00'),
+		to: new Date('2022-11-26T16:00:00'),
+		organization: 'Đoàn khoa Công Nghệ Phần Mềm',
+		content: '🌿Chương trình Tình nguyện Thứ 7 - Chủ nhật Xanh quay trở lại rồi mọi người ơi ‼️ ☘️Năm 2022, Wechange - Change For Green là chương trình tình nguyện mang đến cho các bạn sinh viên một sân chơi bổ ích, xây dựng một không gian xanh - sạch - đẹp, mang đến những trải nghiệm thú vị và quan trọng nhất là lan tỏa đến tất cả mọi người về trách nhiệm và tinh thần trong việc bảo vệ môi trường.',
+		thumbnail: 'https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/282226719_5561191017247796_2674669284264980656_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=Qab4y6RyzzEAX-HV51a&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfCpJFcTL_FXw6msvDzzyQX5w8V83dHIlEl0QF5NwwHFVA&oe=63862B94'
 	}
 ]
 
