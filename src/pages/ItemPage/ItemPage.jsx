@@ -59,6 +59,17 @@ export default function ItemPage() {
 			});
 		}
 
+		if (
+			notZeroItems.indexOf(
+				notZeroItems.find((item) => item.title === "Plastic cup")
+			) !== -1
+		) {
+			messageList.push({
+				message:
+					"Cốc giấy là một trong những nguồn gây ô nhiễm lớn nhất cho môi trường vì vậy cần sử dụng hợp lý và hạn chế",
+			});
+		}
+
 		return messageList;
 	}, [notZeroItems]);
 
