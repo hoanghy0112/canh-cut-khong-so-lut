@@ -1,0 +1,15 @@
+.notify-modal {
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 10px;
+
+	transform: translateY(-50%);
+
+   display: grid;
+   gap: 20px;
+
+	h1 {
+      font-size: 1.2rem;
+		line-height: 2em;
+	}
+}

@@ -9,13 +9,16 @@ import {
 import { addScore } from "../../features/score/scoreSlice";
 
 import { ICON_LEAF } from "../../assets/icons";
+import useNotifyIsOpenModal from "../../hooks/useNotifyIsOpenModal";
+import NotifyModal from "../NotifyModal/NotifyModal";
 
 const NewsActivities = () => {
 	const dispatch = useDispatch();
+	const [isOpen, openNotify] = useNotifyIsOpenModal();
 	const news = useSelector(selectAllActivities);
 
 	function handleClick(data) {
-		alert('Bạn đã đăng ký sự kiện này')
+		openNotify();
 		dispatch(addScore(data.score));
 		dispatch(addMyActivities(data));
 	}
@@ -37,7 +40,9 @@ const NewsActivities = () => {
 								{moment(data.from).format("HH:mm")}-
 								{moment(data.to).format("HH:mm")}
 							</div>
-							<div className={styles.time}>Score: {data.score} <ICON_LEAF color="green"/></div>
+							<div className={styles.time}>
+								Score: {data.score} <ICON_LEAF color="green" />
+							</div>
 							<div className={styles.organization}>
 								{data.organization}
 							</div>
@@ -54,6 +59,10 @@ const NewsActivities = () => {
 						</div>
 					);
 				})}
+			<NotifyModal
+				title="Bạn đã đăng ký tham gia sự kiện này thành công"
+				isOpen={isOpen}
+			></NotifyModal>
 		</>
 	);
 };

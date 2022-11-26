@@ -3,12 +3,14 @@ import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
 import CenteredModal from "../../components/CenteredModal/CenteredModal";
 
 import "./ItemPage.scss";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import AddItemModal from "./components/AddItemModal/AddItemModal";
 import Chart from "../../components/Chart/Chart";
 import { useSelector } from "react-redux";
 import { selectNotZeroItems } from "../../features/item/itemSlice";
 import POLUTION_LIST from "../../constants/POLUTION_LIST";
+import NotifyModal from "../../components/NotifyModal/NotifyModal";
+import useNotifyIsOpenModal from "../../hooks/useNotifyIsOpenModal";
 
 const suggestionMessage = [
 	"Bạn có thể sử dụng chai thủy tinh để tái sử dụng nhiều lần",
@@ -22,6 +24,8 @@ const suggestionMessage = [
 
 export default function ItemPage() {
 	const [isAddItemModalVisible, setAddItemModalVisible] = useState(false);
+	const [isOpen, openNotify] = useNotifyIsOpenModal();
+
 	const notZeroItems = useSelector(selectNotZeroItems);
 
 	const suggestionMessage = useMemo(() => {
@@ -102,7 +106,7 @@ export default function ItemPage() {
 						<Chart data={notZeroItems} />
 					</ResultCard>
 					<div className="donation">
-						<PrimaryButton title="Donate" onClick={() => alert("Bạn đã nhận được 5 điểm")} />
+						<PrimaryButton title="Donate" onClick={() => openNotify()} />
 					</div>
 				</div>
 				<div className="right-side">
@@ -144,6 +148,7 @@ export default function ItemPage() {
 			>
 				<AddItemModal closeFunc={() => setAddItemModalVisible(false)} />
 			</CenteredModal>
+			<NotifyModal title="Bạn đã quyên góp đồ nhựa thành công" isOpen={isOpen}></NotifyModal>
 		</div>
 	);
 }
