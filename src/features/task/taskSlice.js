@@ -14,8 +14,6 @@ export const tasksManagementSclice = createSlice({
 	initialState,
 });
 
-export const { changeListTask } = tasksManagementSclice.actions;
-
 export const selectAllTasks = (state) => state.tasksManagement.listTasks;
 export const selectCurrentWeekTasks = (startDate) =>
 	function (state) {

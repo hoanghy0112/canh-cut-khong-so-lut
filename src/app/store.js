@@ -3,6 +3,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 import taskReducer from "../features/task/taskSlice";
+import activitiesReducer from "../features/activities/activitiesSlice";
 
 export const store = configureStore({
 	reducer: {
@@ -12,6 +13,13 @@ export const store = configureStore({
 				storage,
 			},
 			taskReducer
+		),
+		activities: persistReducer(
+			{
+				key: "activities",
+				storage,
+			},
+			activitiesReducer
 		),
 	},
 });
