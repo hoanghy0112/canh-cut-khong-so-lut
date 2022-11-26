@@ -66,8 +66,8 @@
     .outlet {
       width: 100%;
       height: 100%;
-      //   display: flex;
-      //   flex-direction: row;
+      display: flex;
+      flex-direction: row;
       //   align-items: center;
       //   justify-content: space-between;
       padding: 20px 43px 0px;
@@ -78,19 +78,344 @@
 
       //   align-items: flex-end;
       margin-top: 30px;
-      .title {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 27px;
+      .titleContainer {
         display: flex;
-        align-items: center;
-        letter-spacing: -0.015em;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 66px;
 
-        color: #259e73;
-        margin-top: 53px;
-        margin-left: 53px;
+        width: 300px;
+        margin-top: 81px;
+        margin-left: 300px;
+        .title {
+          height: 27px;
+
+          font-family: 'Manrope';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 27px;
+          display: flex;
+          align-items: center;
+          letter-spacing: -0.015em;
+
+          color: #259e73;
+        }
+        .inputContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px;
+          gap: 28px;
+
+          width: 300px;
+          .nameContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+
+            width: 300px;
+            .title {
+              height: 22px;
+
+              font-family: 'Manrope';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              /* identical to box height */
+
+              display: flex;
+              align-items: center;
+              letter-spacing: -0.015em;
+
+              /* On Surface */
+
+              color: #000000;
+            }
+            .input {
+              height: 32px;
+              border: none;
+              outline: none;
+              width: 300px;
+
+              background: rgba(0, 0, 0, 0.07);
+              border-radius: 10px;
+            }
+          }
+          .descriptionContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+
+            width: 300px;
+            .description {
+              height: 22px;
+
+              font-family: 'Manrope';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              /* identical to box height */
+
+              display: flex;
+              align-items: center;
+              letter-spacing: -0.015em;
+
+              /* On Surface */
+
+              color: #000000;
+            }
+            .input {
+              height: 161px;
+              border: none;
+              width: 300px;
+              outline: none;
+              justify-content: flex-start;
+              align-items: flex-start;
+              padding: 1px;
+
+              background: rgba(0, 0, 0, 0.07);
+              border-radius: 10px;
+            }
+          }
+          .posterContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 15px;
+
+            width: 300px;
+            .poster {
+              height: 22px;
+
+              font-family: 'Manrope';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 22px;
+              /* identical to box height */
+
+              display: flex;
+              align-items: center;
+              letter-spacing: -0.015em;
+
+              /* On Surface */
+
+              color: #000000;
+            }
+            .input {
+              height: 32px;
+              width: 100%;
+              border: none;
+              outline: none;
+
+              background: rgba(0, 0, 0, 0.18);
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+      .detailContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0px;
+        gap: 30px;
+
+        width: 391px;
+        .detail {
+          width: 391px;
+          .border {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 20px;
+            gap: 50px;
+            border: 1px solid rgba(37, 158, 115, 0.5);
+            border-radius: 10px;
+            width: 391px;
+
+            box-sizing: border-box;
+            .timePlace {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 0px;
+              gap: 7px;
+
+              width: 100%;
+              .takePlace {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px;
+                gap: 15px;
+
+                width: 100%;
+                .place {
+                  height: 22px;
+
+                  font-family: 'Manrope';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 22px;
+
+                  display: flex;
+                  align-items: center;
+                  letter-spacing: -0.015em;
+
+                  color: #000000;
+                }
+                .input {
+                  height: 32px;
+                  border: none;
+                  outline: none;
+
+                  background: rgba(0, 0, 0, 0.07);
+                  border-radius: 10px;
+                }
+              }
+              .onContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px;
+                gap: 15px;
+
+                width: 100%;
+                height: 32px;
+                .on {
+                  height: 22px;
+
+                  font-family: 'Manrope';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 22px;
+
+                  display: flex;
+                  align-items: center;
+                  letter-spacing: -0.015em;
+
+                  color: #000000;
+                }
+                .input {
+                  height: 32px;
+                  border: none;
+                  outline: none;
+
+                  background: rgba(0, 0, 0, 0.07);
+                  border-radius: 10px;
+                }
+              }
+            }
+            .endAt {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0px;
+              gap: 8px;
+              width: 100%;
+              .end {
+                height: 22px;
+
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.015em;
+
+                color: #000000;
+              }
+              .input {
+                height: 32px;
+                border: none;
+                outline: none;
+
+                background: rgba(0, 0, 0, 0.07);
+                border-radius: 10px;
+              }
+            }
+            .At {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding: 0px;
+              gap: 15px;
+              justify-content: space-between;
+
+              width: 258px;
+              .container {
+                height: 22px;
+                background-color: transparent;
+
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.015em;
+
+                color: #000000;
+              }
+              .input {
+                height: 32px;
+                border: none;
+                outline: none;
+
+                background: rgba(0, 0, 0, 0.07);
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+        .button {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 65px;
+          gap: 10px;
+          border: none;
+
+          width: 200px;
+          height: 42px;
+          background: #259e73;
+          border-radius: 6px;
+          font-family: 'Manrope';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          /* identical to box height */
+
+          display: flex;
+          align-items: center;
+          text-align: justify;
+
+          /* Surface */
+
+          color: #ffffff;
+        }
       }
     }
   }
