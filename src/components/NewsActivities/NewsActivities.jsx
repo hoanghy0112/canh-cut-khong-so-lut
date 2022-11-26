@@ -2,13 +2,17 @@
 import styles from './NewsActivities.module.scss'
 
 import * as moment from 'moment';
-import { useSelector } from 'react-redux';
+import { useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import { selectAllActivities } from '../../features/activities/activitiesSlice';
-
+import {addScore} from '../../features/score/scoreSlice';
 
 const NewsActivities = () => {
 
     const news = useSelector(selectAllActivities)
+        
+
+    const dispatch = useDispatch()
 
     console.log(news)
 
@@ -40,7 +44,7 @@ const NewsActivities = () => {
                         <div className={styles.thumbnail}>
                             <img src={data.thumbnail}></img>
                         </div>
-                        <div className={styles.join}>
+                        <div className={styles.join} onClick={() => dispatch(addScore(score))}>
                             Join
                         </div>
                     </div>

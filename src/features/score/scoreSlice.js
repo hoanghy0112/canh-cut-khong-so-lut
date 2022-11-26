@@ -14,18 +14,18 @@ export const scoreManagementSlice = createSlice({
 		addScore: (state, action) => {
 			const score = action.payload;
 
-			state.score += score;
+			state.point += score;
 		},
 		reduceScore: (state, action) => {
 			const score = action.payload;
 
-			state.score -= score;
+			state.point -= score;
 		},
 	},
 });
 
 export const { addScore, reduceScore } = scoreManagementSlice.actions;
 
-export const selectScore = (state) => state.scoreManagement.score;
+export const selectScore = (state) => state.scoreManagement.point;
 
 export default scoreManagementSlice.reducer;
