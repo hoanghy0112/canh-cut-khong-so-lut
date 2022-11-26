@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./TabButton.module.scss";
-import { ICON_SUGGESTION, ICON_HOUSE, ICON_SETTING, ICON_USED } from "../../assets/icons";
+import {
+	ICON_SUGGESTION,
+	ICON_HOUSE,
+	ICON_SETTING,
+	ICON_USED,
+} from "../../assets/icons";
 
 export default function TabButton({
 	isSelected = false,
@@ -23,16 +28,9 @@ export default function TabButton({
 						className={styles.house}
 					/>
 				);
-			case "UsedPlastic":
-				return (
-					<ICON_USED
-						color={isSelected ? "white" : "green"}
-						className={styles.house}
-					/>
-				);
 			case "Item":
 				return (
-					<ICON_SETTING
+					<ICON_USED
 						color={isSelected ? "white" : "green"}
 						className={styles.house}
 					/>

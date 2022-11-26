@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Chart.scss";
 
 interface IChartData {
-	name: string;
-	weight: number;
+	title: string;
+	quantity: number;
 	threshold?: number | null;
 }
 
@@ -17,31 +17,31 @@ export default function Chart({ data }: IProps) {
 	useEffect(() => {
 		const maxWeight = data.reduce(
 			(maxValue, value) =>
-				maxValue > value.weight ? maxValue : value.weight,
-			data?.[0]?.weight
+				maxValue > value.quantity ? maxValue : value.quantity,
+			data?.[0]?.quantity
 		);
 
 		setChartData(
-			data.map(({ name, weight }) => ({
-				name,
-				weight,
-				threshold: weight / maxWeight,
+			data.map(({ title, quantity }) => ({
+				title,
+				quantity,
+				threshold: quantity / maxWeight,
 			}))
 		);
 	}, [data]);
 
 	return (
 		<div className="chart">
-			{chartData.map(({ name, weight, threshold }) => (
-				<div key={name} className="bar">
+			{chartData.map(({ title, quantity, threshold }) => (
+				<div key={title} className="bar">
 					<div
 						className="title"
 						style={{
 							color: threshold == 1 ? "#259e73" : "#9291A5",
 						}}
 					>
-						<p>{name}</p>
-						<p>{weight}</p>
+						<p>{title}</p>
+						<p>{quantity}</p>
 					</div>
 					<div
 						className="progress"
