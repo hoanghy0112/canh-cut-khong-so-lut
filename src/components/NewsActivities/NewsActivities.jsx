@@ -9,9 +9,7 @@ import { selectAllActivities } from '../../features/activities/activitiesSlice';
 const NewsActivities = () => {
 
     const news = useSelector(selectAllActivities)
-    console.log(news)
-
-
+    
     return (
         <>
             {news.listActivities && news.listActivities.length > 0 && news.listActivities.map(data => {
