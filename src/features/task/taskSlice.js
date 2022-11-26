@@ -1,6 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { uid } from 'uid';
 import moment from 'moment';
@@ -161,7 +158,7 @@ const initialState = {
     },
     {
       time: {
-        from: new Date('2022-12-04T10:00:00'),
+        from: new Date('2022-12-04T13:00:00'),
         to: new Date('2022-12-04T16:15:00'),
       },
       title: 'Đi chơi',

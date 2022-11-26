@@ -1,7 +1,10 @@
+import * as moment from 'moment';
+
 export function getEndDate(startDate = new Date()) {
-  const endDate = new Date(startDate);
-  endDate.setDate(endDate.getDate() + ((7 - endDate.getDay()) % 7 || 7));
-  //endDate.setMonth(endDate.getMonth() + 1)
+  let endDate = new Date(startDate);
+  //endDate.setDate(endDate.getDate() + ((7 - endDate.getDay()) % 7 || 7));
+  endDate = new Date(moment(endDate).add(1, 'M').endOf("month"))
+  console.log(endDate);
   endDate.setHours(23);
   endDate.setMinutes(59);
   endDate.setSeconds(59);

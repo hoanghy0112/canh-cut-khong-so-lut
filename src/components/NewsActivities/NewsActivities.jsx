@@ -11,7 +11,7 @@ const NewsActivities = () => {
     const news = useSelector(selectAllActivities)
 
     console.log(news)
-    
+
     return (
         <>
             {news && news.length > 0 && news.map(data => {
@@ -27,6 +27,9 @@ const NewsActivities = () => {
                         </div>
                         <div className={styles.time}>
                             {moment(data.from).format("HH:mm")}-{moment(data.to).format("HH:mm")}
+                        </div>
+                        <div className={styles.time}>
+                            Score: {data.score}
                         </div>
                         <div className={styles.organization}>
                             {data.organization}
