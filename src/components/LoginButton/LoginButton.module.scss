@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  height: 50px;
+  width: 260px;
+
+  .loginButton {
+    position: absolute;
+
+    width: 260px;
+
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+
+    padding: 10px;
+    padding-left: 40px;
+
+    box-shadow: var(--button-shadow);
+
+    transition: all 0.3s cubic-bezier(0.37, 0.27, 0.33, 1.65);
+    cursor: pointer;
+
+    top: 0;
+    left: 0;
+
+    &:hover {
+      top: -10px;
+      left: -10px;
+      width: 280px;
+      padding: 20px;
+      padding-left: 40px;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
