@@ -1,0 +1,26 @@
+.timeline-item-container {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  align-items: center;
+
+  // padding: 19px 10px;
+
+  .time {
+    // flex: 1;
+
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 12.3636px;
+    letter-spacing: 0.386364px;
+
+    color: rgba(0, 166, 202, 0.5);
+  }
+
+  .line {
+    flex: 1;
+    width: 100%;
+    height: 0.5px;
+    background-color: rgba(0, 166, 202, 0.25);
+  }
+}
