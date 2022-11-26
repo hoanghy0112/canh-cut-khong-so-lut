@@ -34,6 +34,16 @@ const router = createBrowserRouter([
 		],
 	},
 	{
+		path: "sponsor",
+		element: <SponsorPage />,
+		children: [
+			{
+				path: "item",
+				element: <ItemPage />,
+			},
+		],
+	},
+	{
 		path: "authentication",
 		element: <AuthenticationPage />,
 	},
