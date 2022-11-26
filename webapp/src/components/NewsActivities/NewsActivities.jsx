@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	addMyActivities,
 	selectAllActivities,
+	selectMyActivities,
 } from "../../features/activities/activitiesSlice";
 import { addScore } from "../../features/score/scoreSlice";
 
@@ -16,11 +17,19 @@ const NewsActivities = () => {
 	const dispatch = useDispatch();
 	const [isOpen, openNotify] = useNotifyIsOpenModal();
 	const news = useSelector(selectAllActivities);
+	const myActivities = useSelector(selectMyActivities);
 
 	function handleClick(data) {
-		openNotify();
-		dispatch(addScore(data.score));
-		dispatch(addMyActivities(data));
+		console.log({ myActivities, data });
+		if (
+			myActivities.indexOf(
+				myActivities.find((act) => act.title == data.title)
+			) !== -1
+		) {
+			dispatch(addScore(data.score));
+			openNotify();
+			dispatch(addMyActivities(data));
+		}
 	}
 
 	return (
@@ -51,8 +60,10 @@ const NewsActivities = () => {
 								<img src={data.thumbnail}></img>
 							</div>
 							<div
-								className={styles.join}
+								className={[styles.join, styles.disabled].join(" ")}
+								style={{}}
 								onClick={() => handleClick(data)}
+								disabled
 							>
 								Join
 							</div>

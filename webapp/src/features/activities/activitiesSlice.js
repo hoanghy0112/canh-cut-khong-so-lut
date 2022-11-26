@@ -127,6 +127,11 @@ export const activitiesManagementSlice = createSlice({
 	reducers: {
 		addMyActivities: (state, action) => {
 			const activityData = action.payload;
+			const index = state.myActivities.indexOf(
+				state.myActivities.find((act) => act.title === activityData.title)
+			);
+
+			if (index !== -1) state.myActivities.splice(index, 1);
 			state.myActivities.push(activityData);
 		},
 	},
