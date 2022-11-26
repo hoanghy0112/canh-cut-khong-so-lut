@@ -13,6 +13,7 @@ const NewsActivities = () => {
 	const news = useSelector(selectAllActivities);
 
 	function handleClick(data) {
+		alert('Bạn đã đăng ký sự kiện này')
 		dispatch(addScore(data.score));
 		dispatch(addMyActivities(data));
 	}

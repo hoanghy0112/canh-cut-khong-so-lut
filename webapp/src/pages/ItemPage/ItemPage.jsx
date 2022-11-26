@@ -102,7 +102,7 @@ export default function ItemPage() {
 						<Chart data={notZeroItems} />
 					</ResultCard>
 					<div className="donation">
-						<PrimaryButton title="Donate" />
+						<PrimaryButton title="Donate" onClick={() => alert("Bạn đã nhận được 5 điểm")} />
 					</div>
 				</div>
 				<div className="right-side">
