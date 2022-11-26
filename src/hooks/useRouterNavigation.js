@@ -10,7 +10,6 @@ export default function useAuthenticationNavigation() {
 
 	useEffect(() => {
 		const { isPending, isAuthenticated } = profile;
-		console.log({ profile });
 
 		if (!isPending) {
 			if (!isAuthenticated) navigate(AUTHENTICATION_PAGE);

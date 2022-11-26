@@ -12,13 +12,10 @@ import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 
 import Modal from "react-modal";
-import { useDispatch, useSelector } from "react-redux";
-
-import TagChoosing from "../TagChoosing/TagChoosing";
+import { useDispatch } from "react-redux";
 
 import {
 	ICON_ADD,
-	ICON_BOOKMARKS,
 	ICON_CHART,
 	ICON_FULL_ARROW_RIGHT,
 	ICON_LOCATE,
@@ -28,10 +25,8 @@ import {
 
 import { changeTask, deleteTask } from "../../../task/taskSlice";
 import DateTimePicker from "../DateTimePicker/DateTimePicker";
-import ImportedTag from "../ImportedTag/ImportedTag";
 import TimeTag from "../TimeTag/TimeTag";
 import styles from "./CreateNewTask.module.scss";
-// import { selectTagsWithIDs } from "../../../task/taskSlice";
 
 Modal.setAppElement("#modal");
 
@@ -66,8 +61,6 @@ export default function CreateNewTask({
 
 	const [isAddTag, setIsAddTag] = useState(false);
 	const [isChoosePriority, setIsChoosePriority] = useState(false);
-
-	const populatedTags = useSelector(selectTagsWithIDs(tags));
 
 	useEffect(() => {
 		const newData = {
@@ -245,41 +238,6 @@ export default function CreateNewTask({
 						)}
 					</div>
 				</div>
-				{!isGroup && (
-					<div className={styles.desSentence_2}>
-						<img src={ICON_BOOKMARKS} alt="time" />
-						<div className={styles.list}>
-							{populatedTags.map((tag) => (
-								<ImportedTag
-									key={tag._id}
-									name={tag.title}
-									color={tag.color}
-									onClose={() => {
-										setTags((prev) =>
-											prev.filter(
-												(currentTag) => currentTag !== tag._id
-											)
-										);
-									}}
-								/>
-							))}
-							<div
-								onClick={(e) => {
-									e.stopPropagation();
-									setIsAddTag(true);
-								}}
-								className={styles.buttonAdd}
-								style={{ cursor: "pointer" }}
-							>
-								<img src={ICON_ADD} alt="button" />
-							</div>
-						</div>
-						{isAddTag && (
-							<TagChoosing setTag={(tagID) => handleAddTag(tagID)} />
-						)}
-					</div>
-				)}
-				{isGroup && <div>Add users</div>}
 			</div>
 			<div className={styles.descriptionContainer}>
 				<p className={styles.text}>Description</p>

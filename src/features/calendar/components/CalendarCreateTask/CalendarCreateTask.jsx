@@ -137,7 +137,10 @@ CalendarCreateTask.propTypes = {
 	gridSize: PropTypes.number.isRequired,
 	createNewTask: PropTypes.func.isRequired,
 	retrieveAllTask: PropTypes.func.isRequired,
-	taskWrapperRect: PropTypes.instanceOf(DOMRect),
+	taskWrapperRect: PropTypes.oneOfType([
+		PropTypes.instanceOf(DOMRect),
+		PropTypes.array,
+	]),
 	startDate: PropTypes.instanceOf(Date).isRequired,
 	isGroup: PropTypes.bool,
 };

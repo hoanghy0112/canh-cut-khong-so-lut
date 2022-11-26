@@ -20,7 +20,7 @@ const router = createBrowserRouter([
 				element: <ItemPage />,
 			},
 			{
-				path: "home",
+				path: "",
 				element: <SchedulePage />,
 			},
 			{
