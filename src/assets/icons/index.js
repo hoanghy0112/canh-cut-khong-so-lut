@@ -9,6 +9,8 @@ import {
 import { IoMdAdd } from 'react-icons/io';
 import { IoChevronUpOutline, IoStatsChartOutline } from 'react-icons/io5';
 import { FaRegFlag } from 'react-icons/fa';
+import { AiOutlineGlobal } from 'react-icons/ai';
+import { TbBottle } from 'react-icons/tb';
 // import { IoSettingsOutline } from 'react-icons/io';
 
 export { default as ICON_HOUSE_1 } from './house.svg';
@@ -45,6 +47,7 @@ export { default as ICON_HAT } from './VectorHat.svg';
 export { default as ICON_CHART } from './chart.svg';
 export { default as ICON_CHECKMARK } from './checkmark.svg';
 export { default as ICON_BACK_PRIMARY } from './chevron-back-primary.svg';
+//export { default as ICON_SUGGESTION } from './suggestion.svg'
 // export {default as ICON_SEARCH}
 
 export const ICON_HOUSE = MdOutlineHouse;
@@ -59,3 +62,7 @@ export const ICON_ADD_IO = IoMdAdd;
 export const ICON_CHEVRON_UP = IoChevronUpOutline;
 
 export const ICON_STACK = IoStatsChartOutline;
+
+export const ICON_SUGGESTION = AiOutlineGlobal;
+
+export const ICON_USED = TbBottle

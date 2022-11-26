@@ -3,6 +3,8 @@ import AuthenticationPage from "../pages/AuthenticationPage";
 // import Info from '../components/UserProfile/Info';
 import HomePage from "../pages/HomePage/HomePage";
 import ItemPage from "../pages/ItemPage/ItemPage";
+import SuggestionPage from "../pages/SuggestionPage/SuggestionPage";
+import UsedPlasticPage from "../pages/UsedPlasticPage/UsedPlasticPage";
 
 import QDTestPage from "../pages/QDTstPage";
 
@@ -17,7 +19,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "suggestion",
-				element: <ItemPage />,
+				element: <SuggestionPage />,
+			},
+			{
+				path: "usedplastic",
+				element: <UsedPlasticPage />,
 			},
 		],
 	},
