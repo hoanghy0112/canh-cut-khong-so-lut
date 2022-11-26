@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AuthenticationPage from '../pages/AuthenticationPage';
 import HomePage from '../pages/HomePage/HomePage';
 
+import QDTestPage from '../pages/QDTstPage';
+
 const router = createBrowserRouter([
   {
     path: '',
@@ -10,10 +12,11 @@ const router = createBrowserRouter([
   {
     path: 'home',
     element: <HomePage />,
-	children: {
-		path: 'suggestion'
-	}
   },
+  {
+	path: 'qdtest',
+	element: <QDTestPage/>,
+  }
 ]);
 
 export default function MainRouter() {

@@ -13,6 +13,8 @@ import { ICON_FORWARD } from "../assets/icons";
 
 import styles from "./AuthenticationPage.module.scss";
 
+import useProfileInformation from "../hooks/useProfileInformation";
+
 export default function AuthenticationPage() {
 	const item = new Item("chen", 100, "nhua");
 	const material = new Material("nhua", 50);
