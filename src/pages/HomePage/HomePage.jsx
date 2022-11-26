@@ -48,17 +48,17 @@ const HomePage = () => {
 							}}
 						/>
 						<TabButton
-							isSelected={tab === "group"}
-							type="Group"
+							isSelected={tab === "suggestion"}
+							type="Suggestion"
 							onClick={() => {
-								navigate("/home/group");
+								navigate("/suggestion");
 							}}
 						/>
 						<TabButton
-							isSelected={tab === "setting"}
-							type="Setting"
+							isSelected={tab === "usedplastic"}
+							type="UsedPlastic"
 							onClick={() => {
-								navigate("/home/setting");
+								navigate("/usedplastic");
 							}}
 						/>
 						<TabButton

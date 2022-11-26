@@ -1,0 +1,13 @@
+.container {
+    height: 100%;
+    background-color: aqua;
+    padding: 10px;
+    overflow: scroll;
+
+    .header {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
