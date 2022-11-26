@@ -7,7 +7,6 @@
 	background-color: white;
 	border-top-left-radius: 30px;
 	padding: 40px 100px;
-	overflow-y: auto;
 
 	.button-group {
 		height: 50px;
@@ -18,8 +17,10 @@
 	.result-group {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 80px;
+		gap: 0px;
 		height: 100%;
+		padding: 20px;
+		overflow-y: auto;
 
 		.left-side {
 			display: flex;
@@ -51,6 +52,119 @@
 						font-size: 16px;
 					}
 				}
+			}
+		}
+
+		.right-side {
+			display: flex;
+			flex-direction: column;
+			gap: 80px;
+		}
+		.item-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px;
+
+			.item-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				align-items: center;
+				position: relative;
+
+				.item {
+					cursor: pointer;
+					user-select: none;
+					width: 80px;
+					height: 80px;
+					display: grid;
+					place-items: center;
+					border-radius: 10px;
+					box-shadow: -3px -2px 10px rgba(37, 158, 115, 0.25),
+						5px 8px 10px rgba(37, 158, 115, 0.25);
+
+					transition: 0.2s;
+
+					&::after {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 80px;
+						height: 80px;
+						border-radius: 10px;
+						background-color: rgba(64, 64, 64, 0);
+						transition: 0.2s;
+					}
+
+					&:hover {
+						cursor: pointer;
+						background-color: rgba(222, 222, 222, 0.519);
+						&::after {
+							content: "";
+							background: none;
+						}
+					}
+
+					&:not(.disable):hover {
+						cursor: pointer;
+						&::after {
+							content: "";
+							background: url(../../../../assets/icons/trash.svg)
+								no-repeat;
+							background-position: center;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 80px;
+							height: 80px;
+							border-radius: 10px;
+							background-color: rgba(255, 0, 0, 0.519);
+						}
+					}
+				}
+
+				.item-tool {
+					width: 100%;
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
+
+					p {
+						font-size: 1rem;
+						font-weight: 500;
+					}
+
+					button {
+						align-items: center;
+						background-color: white;
+						border: none;
+						outline: none;
+						cursor: pointer;
+						padding: 5px 6px;
+						border: 0.5px solid rgb(165, 165, 165);
+						border-radius: 5px;
+
+						transition: 0.2s;
+
+						&:hover {
+							background-color: rgb(5, 170, 98);
+							color: white;
+						}
+					}
+				}
+			}
+		}
+
+		.suggestion {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			.suggestion-item {
+				padding: 10px 15px;
+				border-radius: 5px;
+				background-color: #259e7470;
 			}
 		}
 	}

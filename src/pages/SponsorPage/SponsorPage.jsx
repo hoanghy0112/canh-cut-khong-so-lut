@@ -62,7 +62,7 @@ const SponsorPage = () => {
           <p>App</p>
         </div>
         <div className={styles.outlet}>
-          <Outlet />
+          <p className={styles.title}>Create new event</p>
         </div>
       </div>
     </div>
