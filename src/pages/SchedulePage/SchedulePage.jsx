@@ -6,17 +6,35 @@ import PersonalCalendar from "./../../features/calendar/components/PersonalCalen
 import DateTimePicker from "../../features/calendar/components/DateTimePicker/DateTimePicker";
 
 export default function SchedulePage() {
+	// const [startDay, setStartDay] = useState(new Date());
 
-	const [startDay, setStartDay] = useState(new Date())
+	const now = new Date();
 
-	const hanldeChangeStartDay = (date) => {
-		setStartDay(date)
+	const [date, setDate] = useState(
+		new Date(
+			now.getFullYear(),
+			now.getMonth(),
+			now.getDate() - now.getDay() + 1
+		)
+	);
+
+	function handleChangeDate(newDate) {
+		setDate(
+			new Date(
+				newDate.getFullYear(),
+				newDate.getMonth(),
+				newDate.getDate() - newDate.getDay() + 1
+			)
+		);
 	}
 
 	return (
 		<div className="schedule-page">
-			<DateTimePicker startDay={startDay} hanldeChangeStartDay={hanldeChangeStartDay} />
-			<PersonalCalendar startDate={startDay}/>
+			<DateTimePicker
+				startDay={date}
+				hanldeChangeStartDay={handleChangeDate}
+			/>
+			<PersonalCalendar startDate={date} />
 		</div>
 	);
 }

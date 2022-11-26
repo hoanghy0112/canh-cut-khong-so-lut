@@ -1,0 +1,27 @@
+.accumulated-point {
+	width: 100%;
+	height: 100%;
+	border-top-left-radius: 30px;
+	background-color: white;
+	padding: 50px;
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+
+	h2 {
+		font-weight: 600;
+		font-size: 22px;
+
+		color: #259e73;
+
+		span {
+			color: #2073ee;
+         padding: 0 15px;
+         text-decoration: underline;
+		}
+	}
+
+   .button-group {
+      width: 500px;
+   }
+}
