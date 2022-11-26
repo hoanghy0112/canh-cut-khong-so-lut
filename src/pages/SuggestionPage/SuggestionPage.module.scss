@@ -3,27 +3,23 @@
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	justify-content: space-between;
 	padding: 20px 43px 0px;
 	gap: 79px;
 	background: #ffffff;
 	box-shadow: -4.8px -4.8px 18px rgba(0, 166, 202, 0.11);
 	border-radius: 30px 0px 0px 0px;
-	//   justify-content: flex-end;
-	align-items: flex-end;
 
 	.suggestContainer {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		// align-items: flex-start;
 		align-self: flex-start;
 		padding: 0px;
 		margin-top: 10px;
 		gap: 18px;
+		// width: 349px;
 
-		width: 349px;
-		// height: 552px;
 		.title {
 			display: flex;
 			flex-direction: row;
@@ -48,6 +44,7 @@
 				color: #259e73;
 			}
 		}
+
 		.suggest {
 			display: flex;
 			flex-direction: column;
@@ -55,10 +52,9 @@
 			padding: 8px;
 			gap: 41px;
 			margin-bottom: 20px;
-
-			// width: 349px;
-			// height: 497px;
+			// height: 250px;
 			overflow-y: scroll;
+
 			.suggestOfDay {
 				display: flex;
 				flex-direction: column;
@@ -67,6 +63,37 @@
 
 				width: 333px;
 			}
+
+			.activity {
+				display: flex;
+				justify-content: space-between;
+				width: 590px;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 0 10px 0 rgb(167, 231, 195);
+
+				p {
+					width: 200px;
+					font-size: 16px;
+					text-overflow: ellipsis;
+
+					span {
+						font-weight: 600;
+						color: #d69b11;
+					}
+				}
+			}
+		}
+
+		.myActivities {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 8px;
+			gap: 41px;
+			margin-bottom: 90px;
+			height: 300px;
+			overflow-y: scroll;
 
 			.activity {
 				display: flex;

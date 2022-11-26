@@ -21,7 +21,7 @@ const SuggestionPage = () => {
 				<div className={styles.title}>
 					<p className={styles.text}>Your activities</p>
 				</div>
-				<div className={styles.suggest}>
+				<div className={styles.myActivities}>
 					{myActivities.map(({ title, score, from, to }) => (
 						<div className={styles.activity}>
 							<p>
