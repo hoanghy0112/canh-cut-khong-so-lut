@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  height: 30px;
+  gap: 10px;
+
+  border-radius: 6px;
+
+  img {
+    width: 10px;
+    height: 10px;
+
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

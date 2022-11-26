@@ -1,5 +1,5 @@
-import { doc, setDoc, getDoc, collection } from "firebase/firestore";
-import { ITEMS, MATERIALS } from "../../constants/dbTable";
+import { doc, setDoc, getDoc, deleteDoc, collection } from "firebase/firestore";
+import { ITEMS, MATERIALS, USERS } from "../../constants/dbTable";
 import { db } from "../config";
 import { Item } from "./Item";
 import { Material } from "./Material";
@@ -17,13 +17,16 @@ export class User {
 		await setDoc(ref, this);
 	}
 
-   static async getUserProfile(uid: string) {
-
-   }
+	static async getUserProfile(uid: string) {}
 
 	async addItem(name: string, weight: number, material: string) {
 		const newItem = new Item(name, weight, material);
-      const ref = collection(db, `${this.uid}/${ITEMS}`)
+		newItem.saveToFirestore(`${USERS}/${this.uid}/${ITEMS}`);
+	}
+
+	async removeItem(name) {
+		const itemRef = doc(db, USERS, this.uid, ITEMS, name);
+		await deleteDoc(itemRef);
 	}
 }
 

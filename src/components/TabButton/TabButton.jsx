@@ -2,7 +2,11 @@ import React from 'react';
 import styles from './TabButton.module.scss';
 import { ICON_GROUP, ICON_HOUSE, ICON_SETTING } from '../../assets/icons';
 
-export default function TabButton({ isSelected, onClick, type }) {
+export default function TabButton({
+  isSelected = false,
+  onClick,
+  type = 'Home',
+}) {
   const icon = (() => {
     switch (type) {
       case 'Home':
@@ -37,7 +41,7 @@ export default function TabButton({ isSelected, onClick, type }) {
   })();
   return (
     <button
-      type="button"
+      type='button'
       className={`${styles.selected} ${
         isSelected && styles['dark-background']
       }`}

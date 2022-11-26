@@ -1,0 +1,24 @@
+.primaryButton {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #00a6ca;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  &:hover {
+    top: -5px;
+    left: -5px;
+    box-shadow: 5px 5px 0 0 rgb(58, 229, 206);
+  }
+}

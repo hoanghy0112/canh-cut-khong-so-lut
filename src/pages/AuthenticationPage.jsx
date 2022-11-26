@@ -11,11 +11,12 @@ import LoginButton from "../components/LoginButton/LoginButton";
 
 import { ICON_FORWARD } from "../assets/icons";
 
-import styles from './AuthenticationPage.module.scss'
+import styles from "./AuthenticationPage.module.scss";
 
 export default function AuthenticationPage() {
 	const item = new Item("chen", 100, "nhua");
 	const material = new Material("nhua", 50);
+	const profile = useProfileInformation();
 
 	useEffect(() => {
 		async function display() {
@@ -23,6 +24,15 @@ export default function AuthenticationPage() {
 		}
 		display();
 	}, []);
+
+	useEffect(() => {
+		if (profile) {
+			// const uid = profile.uid;
+			// const user = new User(uid);
+			// console.log({ uid });
+			// user.addItem("ly", 50, "nhua");
+		}
+	}, [profile]);
 
 	return (
 		<div className={styles.container}>
