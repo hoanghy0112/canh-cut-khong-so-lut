@@ -65,10 +65,3 @@ export default function TabButton({
 		</button>
 	);
 }
-<<<<<<< HEAD
-TabButton.defaultProps = {
-	isSelected: false,
-	type: "Home",
-};
-=======
->>>>>>> 324866867ef06413f324100605110897c0d445c1
