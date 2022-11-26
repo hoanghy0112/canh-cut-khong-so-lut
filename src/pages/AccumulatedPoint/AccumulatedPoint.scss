@@ -4,9 +4,9 @@
 	border-top-left-radius: 30px;
 	background-color: white;
 	padding: 50px;
-   display: flex;
-   flex-direction: column;
-   gap: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
 
 	h2 {
 		font-weight: 600;
@@ -16,12 +16,28 @@
 
 		span {
 			color: #2073ee;
-         padding: 0 15px;
-         text-decoration: underline;
+			padding: 0 15px;
+			text-decoration: underline;
 		}
 	}
 
-   .button-group {
-      width: 500px;
-   }
+	.button-group {
+		display: flex;
+		align-items: center;
+		gap: 80px;
+
+		div {
+			width: 300px;
+		}
+	}
+
+	.voucher-group {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+
+      .voucher {
+
+      }
+	}
 }
