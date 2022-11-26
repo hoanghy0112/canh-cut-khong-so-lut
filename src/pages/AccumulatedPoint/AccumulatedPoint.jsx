@@ -35,13 +35,13 @@ export default function AccumulatedPoint() {
         </div>
       </div>
       <div className='voucher-group'>
-        {voucherList.map(({ name, description, score: point }) => (
+        {voucherList.map(({ name, description, score: scr }) => (
           <div className='container'>
             <VoucherCard name={name} description={description} />
             <div className='flow'>
               <div
                 className='complete'
-                style={{ width: `${(score * 100) / point}%` }}
+                style={{ width: `${(score * 100) / scr}%` }}
               ></div>
             </div>
             <button className='button'>Claim</button>
