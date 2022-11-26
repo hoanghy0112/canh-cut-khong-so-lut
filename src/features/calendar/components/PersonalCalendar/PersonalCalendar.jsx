@@ -17,14 +17,12 @@ export default function PersonalCalendar({ startDate }) {
 	const tasks = useSelector(selectCurrentWeekTasks(startDate));
 
 	return (
-		
 			<Calendar
 				startDate={startDate}
 				tasks={tasks}
 				changeTask={(data) => dispatch(changeTask(data))}
 				createNewTask={(data) => dispatch(createNewTask(data))}
 			/>
-
 	);
 }
 
