@@ -22,7 +22,7 @@ export default function SuggestForDay() {
   }
 
   function suggest() {
-    const a = [];
+    let a = [];
     const filterdBusyTimeByPeriod = filterTime(
       new Date(),
       listTasks.map((task) => task.time),
@@ -44,6 +44,15 @@ export default function SuggestForDay() {
         }
       }
     }
+    for (let i = 0; i < a.length - 1; i++) {
+      for (let j = i + 1; j < a.length; j++) {
+        if (new Date(a[i].from).getTime() > new Date(a[j].from).getTime()) {
+          let temp = a[i];
+          a[i] = a[j];
+          a[j] = temp;
+        }
+      }
+    }
     return a;
   }
 
@@ -58,8 +67,11 @@ export default function SuggestForDay() {
             <div className={styles.textContainer}>
               <div className={styles.title}>{suggest.title}</div>
             </div>
+            {/* <div className={styles.date}>{</div> */}
             <div className={styles.time}>
-              {moment(suggest.from).format('HH:mm')}
+              {`${moment(suggest.from).format('DD/MM/YYYY HH:mm')} - ${moment(
+                suggest.to
+              ).format('HH:mm')}`}
             </div>
           </div>
         );
