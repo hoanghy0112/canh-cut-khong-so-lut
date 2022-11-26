@@ -8,6 +8,7 @@ import AddItemModal from "./components/AddItemModal/AddItemModal";
 import Chart from "../../components/Chart/Chart";
 import { useSelector } from "react-redux";
 import { selectNotZeroItems } from "../../features/item/itemSlice";
+import POLUTION_LIST from "../../constants/POLUTION_LIST";
 
 const suggestionMessage = [
 	"Bạn có thể sử dụng chai thủy tinh để tái sử dụng nhiều lần",
@@ -59,7 +60,30 @@ export default function ItemPage() {
 			});
 		}
 
+		if (
+			notZeroItems.indexOf(
+				notZeroItems.find((item) => item.title === "Plastic cup")
+			) !== -1
+		) {
+			messageList.push({
+				message:
+					"Cốc giấy là một trong những nguồn gây ô nhiễm lớn nhất cho môi trường vì vậy cần sử dụng hợp lý và hạn chế",
+			});
+		}
+
 		return messageList;
+	}, [notZeroItems]);
+
+	const totalPriceOfCO2 = useMemo(() => {
+		return (
+			1000 *
+			notZeroItems.reduce((total, item) => {
+				const { material, weight, quantity } = item;
+				console.log({ material, weight });
+				const polution = POLUTION_LIST[material];
+				return total + polution * weight * quantity;
+			}, 0)
+		).toFixed(2);
 	}, [notZeroItems]);
 
 	return (
@@ -69,7 +93,7 @@ export default function ItemPage() {
 					<ResultCard title={"The emission of CO2"}>
 						<div className="co2-emission">
 							<div>
-								<p className="number">500g</p>
+								<p className="number">{totalPriceOfCO2}g</p>
 								<p className="unit">CO2</p>
 							</div>
 						</div>

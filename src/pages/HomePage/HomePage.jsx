@@ -7,6 +7,7 @@ import Profile from "../../components/Profile/Profile";
 import TabButton from "../../components/TabButton/TabButton";
 
 import { ICON_LOGOUT } from "../../assets/icons";
+import LOGO from "../../assets/Logo.svg";
 
 import useRouterNavigation from "../../hooks/useRouterNavigation";
 
@@ -63,6 +64,13 @@ const HomePage = () => {
 								navigate(ITEM_MANAGEMENT);
 							}}
 						/>
+						<TabButton
+							isSelected={tab === "accumulated"}
+							type="Point"
+							onClick={() => {
+								navigate("/accumulated");
+							}}
+						/>
 					</div>
 				</div>
 				<button
@@ -76,8 +84,7 @@ const HomePage = () => {
 			</div>
 			<div className={styles.mainBox}>
 				<div className={styles.header}>
-					{/* <img src={Mylogo} alt="Logo" /> */}
-					<p>App</p>
+					<img src={LOGO} alt="Logo" />
 				</div>
 				<div className={styles.outlet}>
 					<Outlet />

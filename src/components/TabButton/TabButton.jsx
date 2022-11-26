@@ -5,6 +5,7 @@ import {
 	ICON_HOUSE,
 	ICON_SETTING,
 	ICON_USED,
+	ICON_POINT,
 } from "../../assets/icons";
 
 export default function TabButton({
@@ -31,6 +32,13 @@ export default function TabButton({
 			case "Item":
 				return (
 					<ICON_USED
+						color={isSelected ? "white" : "green"}
+						className={styles.house}
+					/>
+				);
+			case "Point":
+				return (
+					<ICON_POINT
 						color={isSelected ? "white" : "green"}
 						className={styles.house}
 					/>
