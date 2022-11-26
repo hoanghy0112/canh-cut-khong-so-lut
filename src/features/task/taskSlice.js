@@ -109,7 +109,7 @@ export const tasksManagementSlice = createSlice({
 export const { changeTask, createNewTask, deleteTask } =
 	tasksManagementSlice.actions;
 
-export const selectAllTasks = (state) => state.taskManagement.listTasks;
+export const selectAllTasks = (state) => state.tasksManagement.listTasks;
 export const selectCurrentWeekTasks = (startDate) =>
 	function (state) {
 		const tasks = selectAllTasks(state).filter((task) => {
@@ -122,8 +122,8 @@ export const selectCurrentWeekTasks = (startDate) =>
 		return tasks;
 	};
 
-export const selectTasksStatus = (state) => state.taskManagement.status;
+export const selectTasksStatus = (state) => state.tasksManagement.status;
 
-export const selectTasksError = (state) => state.taskManagement.error;
+export const selectTasksError = (state) => state.tasksManagement.error;
 
 export default tasksManagementSlice.reducer;

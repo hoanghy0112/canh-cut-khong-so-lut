@@ -53,7 +53,7 @@ export const activitiesManagementSlice = createSlice({
 	initialState,
 });
 
-export const selectAllActivities = state => state.activitiesManagement
+export const selectAllActivities = state => state.activitiesManagement.listActivities
 
 
 export default activitiesManagementSlice.reducer;
