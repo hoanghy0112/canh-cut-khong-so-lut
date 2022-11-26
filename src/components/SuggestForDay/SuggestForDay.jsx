@@ -1,10 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import styles from './SuggestForDay.module.scss';
 import * as moment from 'moment';
+import { selectAllActivities } from '../../features/activities/activitiesSlice';
 
 export default function SuggestForDay({ listSuggest = [] }) {
   //   console.log(listSuggest);
-  const time = moment(listSuggest.time).format('HH:MM A');
+  const listActivities = useSelector(selectAllActivities).listActivities;
+  console.log(listActivities);
+  const time = moment(listActivities.from).format('HH:MM A');
   //   const listWork = [{
   //     title: 'Giờ Trái Đất',
   //     content: 'Tiết kiệm năng lượng',
@@ -32,14 +36,15 @@ export default function SuggestForDay({ listSuggest = [] }) {
 
   return (
     <div className={styles.container}>
-      {listSuggest.map((suggest) => {
+      {listActivities.map((suggest) => {
         return (
           <div className={styles.suggest}>
             <div className={styles.textContainer}>
               <div className={styles.title}>{suggest.title}</div>
-              <div className={styles.content}>{suggest.content}</div>
             </div>
-            <div className={styles.time}>{time}</div>
+            <div className={styles.time}>
+              {moment(suggest.from).format('HH:MM')}
+            </div>
           </div>
         );
       })}

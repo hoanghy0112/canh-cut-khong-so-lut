@@ -5,7 +5,7 @@
   padding: 11px 16px;
   gap: 7px;
 
-  max-width: 333px;
+  max-width: 600px;
   //   height: 102px;
 
   background: #ffffff;
@@ -30,18 +30,25 @@
       gap: 18px;
 
       //   width: 183px;
-      max-width: 60%;
+      max-width: 90%;
       height: 22px;
       .title {
         height: 22px;
+        // width: 200px;
 
         font-family: 'Manrope';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: nowrap;
+        display: block;
 
-        display: flex;
+        // display: flex;
         align-items: center;
         letter-spacing: 0.5px;
 
@@ -58,6 +65,7 @@
         display: flex;
         align-items: center;
         letter-spacing: 0.5px;
+        overflow: auto;
 
         color: rgba(0, 85, 103, 0.5);
       }
