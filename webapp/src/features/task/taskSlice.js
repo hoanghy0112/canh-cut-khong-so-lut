@@ -198,6 +198,7 @@ export const tasksManagementSlice = createSlice({
 			const newData = { _id, ...payload.payload };
 			state.listTasks.push(newData);
 		},
+
 		changeTask: (state, payload) => {
 			const { _id } = payload.payload;
 
