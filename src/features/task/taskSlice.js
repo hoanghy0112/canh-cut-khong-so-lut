@@ -6,87 +6,150 @@ import { uid } from 'uid';
 import moment from 'moment';
 
 const initialState = {
-	listTasks: [
-		{
-			time: {
-				from: new Date("2022-11-21T07:30:00"),
-				to: new Date("2022-11-21T11:30:00"),
-			},
-			title: "Nhập môn mạng máy tính Thực hành",
-		},
-		{
-			time: {
-				from: new Date("2022-11-21T13:00:00"),
-				to: new Date("2022-11-21T15:15:00"),
-			},
-			title: "Nhập môn mạng máy tính",
-		},
-		{
-			time: {
-				from: new Date("2022-11-22T07:30:00"),
-				to: new Date("2022-11-22T09:45:00"),
-			},
-			title: "Hệ điều hành",
-		},
-		{
-			time: {
-				from: new Date("2022-11-22T13:00:00"),
-				to: new Date("2022-11-22T17:00:00"),
-			},
-			title: "Hệ điều hành thực hành",
-		},
-		{
-			time: {
-				from: new Date("2022-11-23T07:30:00"),
-				to: new Date("2022-11-23T11:30:00"),
-			},
-			title: "Lập trình trực quan thực hành",
-		},
-		{
-			time: {
-				from: new Date("2022-11-23T13:00:00"),
-				to: new Date("2022-11-23T15:15:00"),
-			},
-			title: "Lập trình trực quan",
-		},
-		{
-			time: {
-				from: new Date("2022-11-24T13:00:00"),
-				to: new Date("2022-11-24T15:15:00"),
-			},
-			title: "Triết học Mác lênin",
-		},
-		{
-			time: {
-				from: new Date("2022-11-25T07:30:00"),
-				to: new Date("2022-11-25T11:30:00"),
-			},
-			title: "Cơ sở dữ liệu thực hành",
-		},
-		{
-			time: {
-				from: new Date("2022-11-25T13:00:00"),
-				to: new Date("2022-11-25T15:15:00"),
-			},
-			title: "Cơ sở dữ liệu",
-		},
-		{
-			time: {
-				from: new Date("2022-11-26T8:00:00"),
-				to: new Date("2022-11-26T10:15:00"),
-			},
-			title: "Học thêm anh văn",
-		},
-		{
-			time: {
-				from: new Date("2022-11-27T13:00:00"),
-				to: new Date("2022-11-27T18:00:00"),
-			},
-			title: "Đi chơi",
-		},
-	],
-	status: "idle",
-	error: null,
+  listTasks: [
+    {
+      time: {
+        from: new Date('2022-11-21T07:30:00'),
+        to: new Date('2022-11-21T11:30:00'),
+      },
+      title: 'Nhập môn mạng máy tính Thực hành',
+    },
+    {
+      time: {
+        from: new Date('2022-11-21T13:00:00'),
+        to: new Date('2022-11-21T15:15:00'),
+      },
+      title: 'Nhập môn mạng máy tính',
+    },
+    {
+      time: {
+        from: new Date('2022-11-22T07:30:00'),
+        to: new Date('2022-11-22T09:45:00'),
+      },
+      title: 'Hệ điều hành',
+    },
+    {
+      time: {
+        from: new Date('2022-11-22T13:00:00'),
+        to: new Date('2022-11-22T17:00:00'),
+      },
+      title: 'Hệ điều hành thực hành',
+    },
+    {
+      time: {
+        from: new Date('2022-11-23T07:30:00'),
+        to: new Date('2022-11-23T11:30:00'),
+      },
+      title: 'Lập trình trực quan thực hành',
+    },
+    {
+      time: {
+        from: new Date('2022-11-23T13:00:00'),
+        to: new Date('2022-11-23T15:15:00'),
+      },
+      title: 'Lập trình trực quan',
+    },
+    {
+      time: {
+        from: new Date('2022-11-24T13:00:00'),
+        to: new Date('2022-11-24T15:15:00'),
+      },
+      title: 'Triết học Mác lênin',
+    },
+    {
+      time: {
+        from: new Date('2022-11-25T07:30:00'),
+        to: new Date('2022-11-25T11:30:00'),
+      },
+      title: 'Cơ sở dữ liệu thực hành',
+    },
+    {
+      time: {
+        from: new Date('2022-11-25T13:00:00'),
+        to: new Date('2022-11-25T15:15:00'),
+      },
+      title: 'Cơ sở dữ liệu',
+    },
+    {
+      time: {
+        from: new Date('2022-11-26T8:00:00'),
+        to: new Date('2022-11-26T10:15:00'),
+      },
+      title: 'Học thêm anh văn',
+    },
+    {
+      time: {
+        from: new Date('2022-11-27T13:00:00'),
+        to: new Date('2022-11-27T18:00:00'),
+      },
+      title: 'Đi chơi',
+    },
+    {
+      time: {
+        from: new Date('2022-11-28T13:00:00'),
+        to: new Date('2022-11-28T15:15:00'),
+      },
+      title: 'Nhập môn mạng máy tính',
+    },
+    {
+      time: {
+        from: new Date('2022-11-29T07:30:00'),
+        to: new Date('2022-11-29T09:45:00'),
+      },
+      title: 'Hệ điều hành',
+    },
+    {
+      time: {
+        from: new Date('2022-11-29T13:00:00'),
+        to: new Date('2022-11-29T17:00:00'),
+      },
+      title: 'Hệ điều hành thực hành',
+    },
+    {
+      time: {
+        from: new Date('2022-11-30T13:00:00'),
+        to: new Date('2022-11-30T15:15:00'),
+      },
+      title: 'Lập trình trực quan',
+    },
+    {
+      time: {
+        from: new Date('2022-12-01T09:00:00'),
+        to: new Date('2022-12-01T10:30:00'),
+      },
+      title: 'Tư tưởng Hồ Chí Minh',
+    },
+    {
+      time: {
+        from: new Date('2022-12-02T14:30:00'),
+        to: new Date('2022-12-02T16:00:00'),
+      },
+      title: 'Chủ nghĩa xã hội khoa học',
+    },
+    {
+      time: {
+        from: new Date('2022-12-03T07:30:00'),
+        to: new Date('2022-12-03T09:45:00'),
+      },
+      title: 'Cơ sở dữ liệu',
+    },
+    {
+      time: {
+        from: new Date('2022-12-03T13:00:00'),
+        to: new Date('2022-12-03T15:30:00'),
+      },
+      title: 'Cơ sở dữ liệu thực hành',
+    },
+    {
+      time: {
+        from: new Date('2022-12-04T10:00:00'),
+        to: new Date('2022-12-04T16:15:00'),
+      },
+      title: 'Đi chơi',
+    },
+  ],
+  status: 'idle',
+  error: null,
 };
 
 export const tasksManagementSlice = createSlice({
