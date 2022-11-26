@@ -4,6 +4,8 @@ import AuthenticationPage from "../pages/AuthenticationPage";
 import HomePage from "../pages/HomePage/HomePage";
 import ItemPage from "../pages/ItemPage/ItemPage";
 
+import QDTestPage from '../pages/QDTstPage';
+
 const router = createBrowserRouter([
 	{
 		path: "",

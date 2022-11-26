@@ -14,6 +14,8 @@ import { ICON_FORWARD } from "../assets/icons";
 import styles from "./AuthenticationPage.module.scss";
 import useAuthenticationNavigation from "../hooks/useRouterNavigation";
 
+import useProfileInformation from "../hooks/useProfileInformation";
+
 export default function AuthenticationPage() {
 	useAuthenticationNavigation();
 
