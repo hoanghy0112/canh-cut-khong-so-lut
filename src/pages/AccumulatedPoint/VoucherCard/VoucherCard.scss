@@ -1,23 +1,30 @@
 .voucher-card {
-	font-size: 16px;
-	font-weight: 400;
-	border: 1px solid rgb(212, 212, 212);
-	border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
 
-	.title {
-		display: flex;
-		align-items: center;
-		gap: 10px 20px;
-		padding: 20px;
-		border-bottom: 1px solid rgb(212, 212, 212);
+  background: #ffffff;
+  box-shadow: -3px -2px 10px rgba(0, 166, 202, 0.25),
+    5px 8px 10px rgba(0, 166, 202, 0.25);
+  border-radius: 10px;
+  width: 450px;
+  overflow: auto;
 
-		svg {
-			width: 30px;
-			height: 30px;
-		}
-	}
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 10px 20px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(212, 212, 212);
 
-	& > p {
-		padding: 20px;
-	}
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  & > p {
+    padding: 20px;
+  }
 }
