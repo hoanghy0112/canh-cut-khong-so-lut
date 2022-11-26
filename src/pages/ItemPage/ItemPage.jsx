@@ -101,6 +101,9 @@ export default function ItemPage() {
 					<ResultCard title={"Quantity of garbage today"}>
 						<Chart data={notZeroItems} />
 					</ResultCard>
+					<div className="donation">
+						<PrimaryButton title="Donate" />
+					</div>
 				</div>
 				<div className="right-side">
 					<ResultCard title={"Garbage"}>
