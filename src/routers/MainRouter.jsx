@@ -8,7 +8,7 @@ import AuthenticationPage from '../pages/AuthenticationPage';
 // import UsedPlasticPage from '../pages/UsedPlasticPage/UsedPlasticPage';
 
 import QDTestPage from '../pages/QDTstPage';
-//import TestPage from '../pages/TestPage_khang/khangTest';
+import TestPage from '../pages/TestPage_khang/khangTest';
 // import SchedulePage from '../pages/SchedulePage/SchedulePage';
 
 const router = createBrowserRouter([
