@@ -74,6 +74,32 @@
         height: 25px;
 
         background: #259e73;
+        padding: 20px 10px;
+
+        box-shadow: -3px -2px 40px rgba(37, 158, 115, 0.6),
+          2px 3px 10px rgba(37, 158, 115, 0.25);
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        color: #ffffff;
+        &:hover {
+          background: #025437;
+        }
+      }
+      .button_none {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        align-self: center;
+        gap: 10px;
+
+        width: 86px;
+        height: 25px;
+
+        background: #585e5c;
+        padding: 20px 10px;
 
         box-shadow: -3px -2px 40px rgba(37, 158, 115, 0.6),
           2px 3px 10px rgba(37, 158, 115, 0.25);

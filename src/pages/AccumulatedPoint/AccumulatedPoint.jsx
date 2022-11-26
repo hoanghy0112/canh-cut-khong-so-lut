@@ -44,7 +44,7 @@ export default function AccumulatedPoint() {
                 style={{ width: `${(score * 100) / scr}%` }}
               ></div>
             </div>
-            <button className='button'>Claim</button>
+            {score >= scr ? <button className='button'>Claim</button> : <button className='button_none'>Claim</button>}
           </div>
         ))}
       </div>
