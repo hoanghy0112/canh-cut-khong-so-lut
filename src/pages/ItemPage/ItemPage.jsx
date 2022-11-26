@@ -39,13 +39,15 @@ export default function ItemPage() {
 						<Chart data={data} />
 					</ResultCard>
 				</div>
-				<div className="right-side"></div>
+				<div className="right-side">
+					<ResultCard title={"Garbage"}></ResultCard>
+				</div>
 			</div>
 			<CenteredModal
 				isOpen={isAddItemModalVisible}
 				onClose={() => setAddItemModalVisible(false)}
 			>
-				<AddItemModal />
+				<AddItemModal closeFunc={() => setAddItemModalVisible(false)} />
 			</CenteredModal>
 		</div>
 	);
