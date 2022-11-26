@@ -6,73 +6,87 @@ import { uid } from 'uid';
 import moment from 'moment';
 
 const initialState = {
-  listTasks: [
-    {
-      time: {
-        from: new Date('2022-12-21T07:30:00'),
-        to: new Date('2022-12-21T11:30:00'),
-      },
-      title: 'Nhập môn mạng máy tính Thực hành',
-    },
-    {
-      time: {
-        from: new Date('2022-12-21T13:00:00'),
-        to: new Date('2022-12-21T15:15:00'),
-      },
-      title: 'Nhập môn mạng máy tính',
-    },
-    {
-      time: {
-        from: new Date('2022-12-22T07:30:00'),
-        to: new Date('2022-12-22T09:45:00'),
-      },
-      title: 'Hệ điều hành',
-    },
-    {
-      time: {
-        from: new Date('2022-12-22T13:00:00'),
-        to: new Date('2022-12-22T17:00:00'),
-      },
-      title: 'Hệ điều hành thực hành',
-    },
-    {
-      time: {
-        from: new Date('2022-12-23T07:30:00'),
-        to: new Date('2022-12-23T11:30:00'),
-      },
-      title: 'Lập trình trực quan thực hành',
-    },
-    {
-      time: {
-        from: new Date('2022-12-23T13:00:00'),
-        to: new Date('2022-12-23T15:15:00'),
-      },
-      title: 'Lập trình trực quan',
-    },
-    {
-      time: {
-        from: new Date('2022-12-24T13:00:00'),
-        to: new Date('2022-12-24T15:15:00'),
-      },
-      title: 'Triết học Mác lênin',
-    },
-    {
-      time: {
-        from: new Date('2022-12-25T07:30:00'),
-        to: new Date('2022-12-25T11:30:00'),
-      },
-      title: 'Cơ sở dữ liệu thực hành',
-    },
-    {
-      time: {
-        from: new Date('2022-12-25T13:00:00'),
-        to: new Date('2022-12-25T15:15:00'),
-      },
-      title: 'Cơ sở dữ liệu',
-    },
-  ],
-  status: 'idle',
-  error: null,
+	listTasks: [
+		{
+			time: {
+				from: new Date("2022-12-21T07:30:00"),
+				to: new Date("2022-12-21T11:30:00"),
+			},
+			title: "Nhập môn mạng máy tính Thực hành",
+		},
+		{
+			time: {
+				from: new Date("2022-12-21T13:00:00"),
+				to: new Date("2022-12-21T15:15:00"),
+			},
+			title: "Nhập môn mạng máy tính",
+		},
+		{
+			time: {
+				from: new Date("2022-12-22T07:30:00"),
+				to: new Date("2022-12-22T09:45:00"),
+			},
+			title: "Hệ điều hành",
+		},
+		{
+			time: {
+				from: new Date("2022-12-22T13:00:00"),
+				to: new Date("2022-12-22T17:00:00"),
+			},
+			title: "Hệ điều hành thực hành",
+		},
+		{
+			time: {
+				from: new Date("2022-12-23T07:30:00"),
+				to: new Date("2022-12-23T11:30:00"),
+			},
+			title: "Lập trình trực quan thực hành",
+		},
+		{
+			time: {
+				from: new Date("2022-12-23T13:00:00"),
+				to: new Date("2022-12-23T15:15:00"),
+			},
+			title: "Lập trình trực quan",
+		},
+		{
+			time: {
+				from: new Date("2022-12-24T13:00:00"),
+				to: new Date("2022-12-24T15:15:00"),
+			},
+			title: "Triết học Mác lênin",
+		},
+		{
+			time: {
+				from: new Date("2022-12-25T07:30:00"),
+				to: new Date("2022-12-25T11:30:00"),
+			},
+			title: "Cơ sở dữ liệu thực hành",
+		},
+		{
+			time: {
+				from: new Date("2022-12-25T13:00:00"),
+				to: new Date("2022-12-25T15:15:00"),
+			},
+			title: "Cơ sở dữ liệu",
+		},
+		{
+			time: {
+				from: new Date("2022-12-26T13:00:00"),
+				to: new Date("2022-12-26T15:15:00"),
+			},
+			title: "Cơ sở dữ liệu",
+		},
+		{
+			time: {
+				from: new Date("2022-12-25T13:00:00"),
+				to: new Date("2022-12-25T15:15:00"),
+			},
+			title: "Cơ sở dữ liệu",
+		},
+	],
+	status: "idle",
+	error: null,
 };
 
 export const tasksManagementSlice = createSlice({
