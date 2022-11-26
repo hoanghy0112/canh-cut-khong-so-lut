@@ -16,7 +16,9 @@
 	}
 
 	.result-group {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 80px;
 		height: 100%;
 
 		.left-side {

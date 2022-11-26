@@ -4,6 +4,7 @@ import storage from "redux-persist/lib/storage";
 
 import taskReducer from "../features/task/taskSlice";
 import activitiesReducer from "../features/activities/activitiesSlice";
+import itemReducer from "../features/item/itemSlice";
 
 export const store = configureStore({
 	reducer: {
@@ -20,6 +21,13 @@ export const store = configureStore({
 				storage,
 			},
 			activitiesReducer
+		),
+		itemsManagement: persistReducer(
+			{
+				key: "itemsManagement",
+				storage,
+			},
+			itemReducer
 		),
 	},
 });

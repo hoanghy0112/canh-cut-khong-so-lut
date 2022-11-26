@@ -50,6 +50,7 @@
 
 					.item {
 						cursor: pointer;
+						user-select: none;
 						width: 80px;
 						height: 80px;
 						display: grid;
@@ -73,6 +74,15 @@
 						}
 
 						&:hover {
+							cursor: pointer;
+							background-color: rgba(222, 222, 222, 0.519);
+							&::after {
+								content: "";
+								background: none;
+							}
+						}
+
+						&:not(.disable):hover {
 							cursor: pointer;
 							&::after {
 								content: "";
