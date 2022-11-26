@@ -3,7 +3,6 @@ import styles from "./TabButton.module.scss";
 import {
 	ICON_SUGGESTION,
 	ICON_HOUSE,
-	ICON_SETTING,
 	ICON_USED,
 	ICON_POINT,
 } from "../../assets/icons";
@@ -36,7 +35,7 @@ export default function TabButton({
 						className={styles.house}
 					/>
 				);
-			case "Point":
+			case "Gifts":
 				return (
 					<ICON_POINT
 						color={isSelected ? "white" : "green"}
