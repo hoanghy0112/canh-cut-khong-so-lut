@@ -80,8 +80,30 @@ const initData = [
     content:
       '🌿Chương trình Tình nguyện Thứ 7 - Chủ nhật Xanh quay trở lại rồi mọi người ơi ‼️ ☘️Năm 2022, Wechange - Change For Green là chương trình tình nguyện mang đến cho các bạn sinh viên một sân chơi bổ ích, xây dựng một không gian xanh - sạch - đẹp, mang đến những trải nghiệm thú vị và quan trọng nhất là lan tỏa đến tất cả mọi người về trách nhiệm và tinh thần trong việc bảo vệ môi trường.',
     thumbnail:
-      'https: //scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/282226719_5561191017247796_2674669284264980656_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=Qab4y6RyzzEAX-HV51a&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfCpJFcTL_FXw6msvDzzyQX5w8V83dHIlEl0QF5NwwHFVA&oe=63862B94',
+      'https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/282226719_5561191017247796_2674669284264980656_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=Qab4y6RyzzEAX-HV51a&tn=2d7GN49ipTu3PFGh&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfDHgn0zW_x5IlkMjt3ppjdS6RCu6ZYhTg5RG1rGBkDhgA&oe=638825D4',
   },
+  {
+    title: 'CLEAN DAY 2022- CHUỖI NHẶT RÁC XUYÊN VIỆT NAM',
+    date: new Date('2022-12-01T00:00:00'),
+    from: new Date('2022-12-01T09:00:00'),
+    to: new Date('2022-12-01T10:00:00'),
+    organization: 'Hội yêu rác',
+    content:
+      '🎉Nhằm làm sạch môi trường sống không còn rác thải nhựa, HỘI YÊU RÁC tổ chức ngày hội CLEAN DAY 2022 với Sologan “NGƯỜI VIỆT NAM KHÔNG XẢ RÁC” sẽ được diễn ra vào ngày 01/12/2022 đồng loạt trên các tỉnh của Việt Nam. Hoạt động mang tính chất lan tỏa thông điệu hãy yêu môi trường, ngừng thải rác ra bên ngoài để cùng nhau sống và làm việc trong môi trường không rác thải.',
+    thumbnail:
+      'https://scontent.fsgn2-1.fna.fbcdn.net/v/t39.30808-6/275809756_3122143544710005_75101795778406231_n.jpg?stp=dst-jpg_p843x403&_nc_cat=107&ccb=1-7&_nc_sid=5cd70e&_nc_ohc=C29MILdiDzUAX9WAjkk&tn=2d7GN49ipTu3PFGh&_nc_ht=scontent.fsgn2-1.fna&oh=00_AfBT9C5YIHGUebjTTEo6FG4b0Q4qPBdLMxqnIlo7WalloQ&oe=6387E2AD',
+  },
+  {
+    title: 'Cuộc thi “Tôi đi nhặt rác!”',
+    date: new Date('2022-12-04T00:00:00'),
+    from: new Date('2022-12-04T09:00:00'),
+    to: new Date('2022-12-04T10:00:00'),
+    organization: 'Thế hệ xanh',
+    content:
+      'Với mong muốn góp một món quà nhỏ cho ngày môi trường thế giới 5-6, Thế Hệ Xanh cùng phối hợp với nhóm Hội nuôi trùn xử lý rác, trồng cây: https://www.facebook.com/groups/245119030305576 tổ chức cuộc thi với tổng giá trị giải thưởng 17 TRIỆU ĐỒNG! “Việc “xanh” làm mình đã thay đổi vậy nên mình cũng muốn mọi người cùng tự hào và chia sẻ với nhau câu chuyện “nhặt rác” của bản thân.” là lời chia sẻ của anh Khâm người đã đau đáu với nông nghiệp hữu cơ cũng như xử lý rác hữu cơ 5 năm năm nay. “Rác” có thể trong nhà, ngoài phố, từ việc giảm rác nhựa, bớt rác hữu cơ tới việc trồng rau và cây xanh đô thị. Thế Hệ Xanh mong muốn cùng bạn tạo nên một chuỗi các hành động khuyến khích bạn bè, người thân GIẢM RÁC và LÀM XANH ĐÔ THỊ.',
+    thumbnail:
+      'https://thehexanh.net/wp-content/uploads/2021/05/184295250_4075257942537785_1271119848602301572_n-1536x864.jpg',
+  }
 ];
 
 const initialState = {
