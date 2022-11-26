@@ -3,36 +3,15 @@ import { useSelector } from 'react-redux';
 import styles from './SuggestForDay.module.scss';
 import * as moment from 'moment';
 import { selectAllActivities } from '../../features/activities/activitiesSlice';
+import { selectAllTasks } from '../../features/task/taskSlice';
 
 export default function SuggestForDay({ listSuggest = [] }) {
   //   console.log(listSuggest);
   const listActivities = useSelector(selectAllActivities).listActivities;
-  console.log(listActivities);
+  //   console.log(listActivities);
   const time = moment(listActivities.from).format('HH:MM A');
-  //   const listWork = [{
-  //     title: 'Giờ Trái Đất',
-  //     content: 'Tiết kiệm năng lượng',
-  //     timeMin: 60,
-  //   },
-  //   {
-  //     title: 'Sắp xếp đồ',
-  //     content: 'Mang đi từ thiện những đồ không dùng đến',
-  //     timeMin: 30,
-  //   },
-  //   {
-  //     title: 'Dọn dẹp, phân loại',
-  //     content: 'Tạo môi trường sống xanh, sạch, đẹp và phân loại các loại rác thải',
-  //     timeMin: 60,
-  //   },
-  //   {
-  //     title: 'Tái chế',
-  //     content: 'Tạo ra các vật dụng tái chế, hạn chế rác thải, tiết kiệm kinh phí',
-  //     timeMin: 90,
-  //   },
-  //   {
-  //     title: '',
-  //   }
-  // ];
+  const listTasks = useSelector(selectAllTasks);
+  console.log(listTasks);
 
   return (
     <div className={styles.container}>
