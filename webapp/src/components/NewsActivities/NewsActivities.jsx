@@ -16,6 +16,7 @@ import NotifyModal from "../NotifyModal/NotifyModal";
 const NewsActivities = () => {
 	const dispatch = useDispatch();
 	const [isOpen, openNotify] = useNotifyIsOpenModal();
+
 	const news = useSelector(selectAllActivities);
 	const myActivities = useSelector(selectMyActivities);
 
