@@ -1,0 +1,36 @@
+.chart {
+	// width: 220px;
+	// height: 160px;
+	padding: 20px;
+
+	display: grid;
+	gap: 10px;
+
+	border-radius: 10px;
+	box-shadow: -3px -2px 10px rgba(37, 158, 115, 0.25),
+		2px 3px 10px rgba(37, 158, 115, 0.25);
+
+	.bar {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		.title {
+			display: flex;
+			justify-content: space-between;
+			p {
+				font-weight: 500;
+				font-size: 15px;
+				color: inherit;
+			}
+		}
+
+		.progress {
+			transition: 1s;
+			background-color: #259e73;
+			// width: var(--threshold);
+			height: 9px;
+			border-radius: 3px;
+		}
+	}
+}
