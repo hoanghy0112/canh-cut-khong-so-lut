@@ -1,4 +1,6 @@
+import { useSelector } from "react-redux";
 import PrimaryButton from "../../components/PrimaryButton/PrimaryButton";
+import { selectScore } from "../../features/score/scoreSlice";
 import "./AccumulatedPoint.scss";
 import VoucherCard from "./VoucherCard/VoucherCard";
 
@@ -10,11 +12,13 @@ const voucherList = [
 ];
 
 export default function AccumulatedPoint() {
+	const score = useSelector(selectScore);
+
 	return (
 		<div className="accumulated-point">
 			<div className="button-group">
 				<h2>
-					Your accumulated point <span>5</span>{" "}
+					Your accumulated point <span>{score || 0}</span>{" "}
 				</h2>
 				<div>
 					<PrimaryButton title="Earn more point" />

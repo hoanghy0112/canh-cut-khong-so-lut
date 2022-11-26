@@ -4,7 +4,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	point: 0,
+	score: 0,
 };
 
 export const scoreManagementSlice = createSlice({
