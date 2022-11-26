@@ -12,7 +12,7 @@ const NewsActivities = () => {
     
     return (
         <>
-            {news.listActivities && news.listActivities.length > 0 && news.listActivities.map(data => {
+            {news && news.length > 0 && news.map(data => {
                 return (
                     <div className={styles.container}>
                         <div className={styles.header}>
