@@ -6,11 +6,10 @@ import { selectAllActivities } from '../../features/activities/activitiesSlice';
 import { selectAllTasks } from '../../features/task/taskSlice';
 import filterTime from './utils';
 
-export default function SuggestForDay({ listSuggest = [] }) {
+export default function SuggestForDay() {
   //   console.log(listSuggest);
   const listActivities = useSelector(selectAllActivities);
   //   console.log(listActivities);
-  const time = moment(listActivities.from).format('HH:MM A');
   const listTasks = useSelector(selectAllTasks);
   //   console.log(listTasks);
 
@@ -23,6 +22,7 @@ export default function SuggestForDay({ listSuggest = [] }) {
   }
 
   function suggest() {
+    const a = []
     const filterdBusyTimeByPeriod = filterTime(
       new Date(),
       listTasks.map((task) => task.time),
@@ -30,23 +30,23 @@ export default function SuggestForDay({ listSuggest = [] }) {
       ['Cả ngày'],
       'Cả tuần'
     );
-    const list = [];
     // console.log(filterdBusyTimeByPeriod);
     for (let i = 0; i < filterdBusyTimeByPeriod.length; i++) {
       for (let j = 0; j < listActivities.length; j++) {
         if (
           compare(listActivities[j].date, filterdBusyTimeByPeriod[i].from) &&
-          listActivities[j].from > filterdBusyTimeByPeriod[i].from &&
-          listActivities[j].to < filterdBusyTimeByPeriod[i].to
+          new Date(listActivities[j].from) > new Date(filterdBusyTimeByPeriod[i].from) &&
+          new Date(listActivities[j].to) < new Date(filterdBusyTimeByPeriod[i].to)
         ) {
-          list.push(listActivities[j]);
+          a.push(listActivities[j]);
         }
       }
     }
-    return list;
+    return a;
   }
 
   const list = suggest();
+  console.log(list);
 
   return (
     <div className={styles.container}>
@@ -57,7 +57,7 @@ export default function SuggestForDay({ listSuggest = [] }) {
               <div className={styles.title}>{suggest.title}</div>
             </div>
             <div className={styles.time}>
-              {moment(suggest.from).format('HH:MM')}
+              {moment(suggest.from).format('HH:mm')}
             </div>
           </div>
         );
