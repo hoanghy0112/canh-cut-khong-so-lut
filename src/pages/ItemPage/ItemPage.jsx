@@ -20,8 +20,8 @@ export default function ItemPage() {
 			<div className="result-group">
 				<ResultCard title={"The emission of CO2"}>
 					<div className="co2-emission">
-						<p className="number"></p>
-						<p className="unit"></p>
+						<p className="number">500g</p>
+						<p className="unit">CO2</p>
 					</div>
 				</ResultCard>
 			</div>
