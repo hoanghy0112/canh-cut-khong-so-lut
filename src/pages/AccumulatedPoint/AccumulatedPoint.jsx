@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { useSelector } from 'react-redux';
->>>>>>> be3ece2bdee40d690f099269a23b462dd79b4065
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
 import { selectScore } from '../../features/score/scoreSlice';
 import './AccumulatedPoint.scss';
@@ -26,11 +23,8 @@ const voucherList = [
 ];
 
 export default function AccumulatedPoint() {
-<<<<<<< HEAD
-=======
   const score = useSelector(selectScore);
 
->>>>>>> be3ece2bdee40d690f099269a23b462dd79b4065
   return (
     <div className='accumulated-point'>
       <div className='button-group'>
