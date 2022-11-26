@@ -30,6 +30,8 @@ const HomePage = () => {
 		auth.signOut();
 	}
 
+	//console.log(tab)
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.informationBox}>
@@ -41,10 +43,10 @@ const HomePage = () => {
 					/>
 					<div className={styles.buttonBox}>
 						<TabButton
-							isSelected={tab === "schedule"}
+							isSelected={tab === ""}
 							type="Home"
 							onClick={() => {
-								navigate("/home/schedule");
+								navigate("/");
 							}}
 						/>
 						<TabButton
