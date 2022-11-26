@@ -9,7 +9,7 @@ import filterTime from './utils';
 export default function SuggestForDay({ listSuggest = [] }) {
   //   console.log(listSuggest);
   const listActivities = useSelector(selectAllActivities);
-  //   console.log(listActivities);
+  console.log(listActivities);
   const time = moment(listActivities.from).format('HH:MM A');
   const listTasks = useSelector(selectAllTasks);
   //   console.log(listTasks);
@@ -47,6 +47,7 @@ export default function SuggestForDay({ listSuggest = [] }) {
   }
 
   const list = suggest();
+  console.log(list);
 
   return (
     <div className={styles.container}>
