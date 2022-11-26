@@ -80,7 +80,7 @@ const initData = [
     content:
       '🌿Chương trình Tình nguyện Thứ 7 - Chủ nhật Xanh quay trở lại rồi mọi người ơi ‼️ ☘️Năm 2022, Wechange - Change For Green là chương trình tình nguyện mang đến cho các bạn sinh viên một sân chơi bổ ích, xây dựng một không gian xanh - sạch - đẹp, mang đến những trải nghiệm thú vị và quan trọng nhất là lan tỏa đến tất cả mọi người về trách nhiệm và tinh thần trong việc bảo vệ môi trường.',
     thumbnail:
-      'https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/282226719_5561191017247796_2674669284264980656_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=Qab4y6RyzzEAX-HV51a&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfCpJFcTL_FXw6msvDzzyQX5w8V83dHIlEl0QF5NwwHFVA&oe=63862B94',
+      'https: //scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/282226719_5561191017247796_2674669284264980656_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=Qab4y6RyzzEAX-HV51a&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfCpJFcTL_FXw6msvDzzyQX5w8V83dHIlEl0QF5NwwHFVA&oe=63862B94',
   },
 ];
 

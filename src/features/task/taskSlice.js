@@ -9,78 +9,78 @@ const initialState = {
 	listTasks: [
 		{
 			time: {
-				from: new Date("2022-12-21T07:30:00"),
-				to: new Date("2022-12-21T11:30:00"),
+				from: new Date("2022-11-21T07:30:00"),
+				to: new Date("2022-11-21T11:30:00"),
 			},
 			title: "Nhập môn mạng máy tính Thực hành",
 		},
 		{
 			time: {
-				from: new Date("2022-12-21T13:00:00"),
-				to: new Date("2022-12-21T15:15:00"),
+				from: new Date("2022-11-21T13:00:00"),
+				to: new Date("2022-11-21T15:15:00"),
 			},
 			title: "Nhập môn mạng máy tính",
 		},
 		{
 			time: {
-				from: new Date("2022-12-22T07:30:00"),
-				to: new Date("2022-12-22T09:45:00"),
+				from: new Date("2022-11-22T07:30:00"),
+				to: new Date("2022-11-22T09:45:00"),
 			},
 			title: "Hệ điều hành",
 		},
 		{
 			time: {
-				from: new Date("2022-12-22T13:00:00"),
-				to: new Date("2022-12-22T17:00:00"),
+				from: new Date("2022-11-22T13:00:00"),
+				to: new Date("2022-11-22T17:00:00"),
 			},
 			title: "Hệ điều hành thực hành",
 		},
 		{
 			time: {
-				from: new Date("2022-12-23T07:30:00"),
-				to: new Date("2022-12-23T11:30:00"),
+				from: new Date("2022-11-23T07:30:00"),
+				to: new Date("2022-11-23T11:30:00"),
 			},
 			title: "Lập trình trực quan thực hành",
 		},
 		{
 			time: {
-				from: new Date("2022-12-23T13:00:00"),
-				to: new Date("2022-12-23T15:15:00"),
+				from: new Date("2022-11-23T13:00:00"),
+				to: new Date("2022-11-23T15:15:00"),
 			},
 			title: "Lập trình trực quan",
 		},
 		{
 			time: {
-				from: new Date("2022-12-24T13:00:00"),
-				to: new Date("2022-12-24T15:15:00"),
+				from: new Date("2022-11-24T13:00:00"),
+				to: new Date("2022-11-24T15:15:00"),
 			},
 			title: "Triết học Mác lênin",
 		},
 		{
 			time: {
-				from: new Date("2022-12-25T07:30:00"),
-				to: new Date("2022-12-25T11:30:00"),
+				from: new Date("2022-11-25T07:30:00"),
+				to: new Date("2022-11-25T11:30:00"),
 			},
 			title: "Cơ sở dữ liệu thực hành",
 		},
 		{
 			time: {
-				from: new Date("2022-12-25T13:00:00"),
-				to: new Date("2022-12-25T15:15:00"),
+				from: new Date("2022-11-25T13:00:00"),
+				to: new Date("2022-11-25T15:15:00"),
 			},
 			title: "Cơ sở dữ liệu",
 		},
 		{
 			time: {
-				from: new Date("2022-12-26T8:00:00"),
-				to: new Date("2022-12-26T10:15:00"),
+				from: new Date("2022-11-26T8:00:00"),
+				to: new Date("2022-11-26T10:15:00"),
 			},
 			title: "Học thêm anh văn",
 		},
 		{
 			time: {
-				from: new Date("2022-12-27T13:00:00"),
-				to: new Date("2022-12-27T18:00:00"),
+				from: new Date("2022-11-27T13:00:00"),
+				to: new Date("2022-11-27T18:00:00"),
 			},
 			title: "Đi chơi",
 		},
