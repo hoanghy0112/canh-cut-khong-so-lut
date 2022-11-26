@@ -7,7 +7,7 @@ import Profile from "../../components/Profile/Profile";
 import TabButton from "../../components/TabButton/TabButton";
 
 import { ICON_LOGOUT } from "../../assets/icons";
-import LOGO from "../../assets/Logo.svg";
+import LOGO from "../../assets/Logo.png";
 
 import useRouterNavigation from "../../hooks/useRouterNavigation";
 
