@@ -5,6 +5,14 @@ import CenteredModal from "../../components/CenteredModal/CenteredModal";
 import "./ItemPage.scss";
 import { useState } from "react";
 import AddItemModal from "./components/AddItemModal/AddItemModal";
+import Chart from "../../components/Chart/Chart";
+
+const data = [
+	{ name: "Bag", weight: 12 },
+	{ name: "Bottle", weight: 5 },
+	{ name: "Straw", weight: 6 },
+	{ name: "Cup", weight: 1 },
+];
 
 export default function ItemPage() {
 	const [isAddItemModalVisible, setAddItemModalVisible] = useState(false);
@@ -28,12 +36,7 @@ export default function ItemPage() {
 						</div>
 					</ResultCard>
 					<ResultCard title={"The emission of CO2"}>
-						<div className="co2-emission">
-							<div>
-								<p className="number">500g</p>
-								<p className="unit">CO2</p>
-							</div>
-						</div>
+						<Chart data={data} />
 					</ResultCard>
 				</div>
 				<div className="right-side"></div>
