@@ -7,9 +7,9 @@ import activitiesReducer from "../features/activities/activitiesSlice";
 
 export const store = configureStore({
 	reducer: {
-		taskManagement: persistReducer(
+		tasksManagement: persistReducer(
 			{
-				key: "taskManagement",
+				key: "tasksManagement",
 				storage,
 			},
 			taskReducer

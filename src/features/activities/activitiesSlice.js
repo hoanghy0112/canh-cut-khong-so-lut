@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initData = [
 	{
 		title: 'CLEAN UP VIỆT NAM LẦN 4 - ĐẦU CẦU HỒ CHÍ MINH',
-		date: new Date('2022-12-04'),
+		date: new Date('2022-12-04T00:00:00'),
 		from: new Date('2022-12-04T15:00:00'),
 		to: new Date('2022-12-04T18:00:00'),
 		organization: 'Cộng đồng xanh Việt Nam',
@@ -13,7 +13,7 @@ const initData = [
 	{
 		title: 'TUYỂN TÌNH NGUYỆN VIÊN HOẠT ĐỘNG NHẶT RÁC',
 		//date: '19/11/2022',
-		date: new Date('2022-11-19'),
+		date: new Date('2022-11-19T00:00:00'),
 		from: new Date('2022-11-19T08:00:00'),
 		to: new Date('2022-11-19T10:00:00'),
 		organization: 'Green University DUE',
@@ -23,7 +23,7 @@ const initData = [
 	{
 		title: 'UIT Green 2022',
 		//date: '28/10/2022',
-		date: new Date('2022-10-28'),
+		date: new Date('2022-10-28T00:00:00'),
 		from: new Date('2022-10-28T08:00:00'),
 		to: new Date('2022-10-28T10:00:00'),
 		organization: 'Hội sinh viên Việt Nam, trường Đại học Công Nghệ Thông Tin',
@@ -32,7 +32,7 @@ const initData = [
 	},
 	{
 		title: 'Tuyển tình nguyện viên chương trình UIT Green 2022 🌱🌱',
-		date: new Date('2022-03-10'),
+		date: new Date('2022-03-10T00:00:00'),
 		from: new Date('2022-03-10T08:00:00'),
 		to: new Date('2022-03-10T10:00:00'),
 		organization: 'Đoàn thanh niên - Hội sinh viên, trường Đại học Công Nghệ Thông Tin',
@@ -53,7 +53,7 @@ export const activitiesManagementSlice = createSlice({
 	initialState,
 });
 
-export const selectAllActivities = state => state.activitiesManagement
+export const selectAllActivities = state => state.activitiesManagement.listActivities
 
 
 export default activitiesManagementSlice.reducer;
