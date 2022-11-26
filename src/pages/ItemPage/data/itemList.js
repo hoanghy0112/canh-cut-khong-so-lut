@@ -34,6 +34,18 @@ const ITEMS_LIST = [
 		weight: 0.05,
 	},
 	{
+		title: "Plastic bag",
+		image: BAG,
+		material: "plastic",
+		weight: 0.04,
+	},
+	{
+		title: "Plastic bottle",
+		image: BOTTLE,
+		material: "plastic",
+		weight: 0.05,
+	},
+	{
 		title: "Plastic spoon",
 		image: SPOON,
 		material: "plastic",

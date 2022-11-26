@@ -3,6 +3,7 @@
 	height: 600px;
 	background-color: white;
 	border-radius: 15px;
+	overflow: scroll;
 
 	transform: translate(-25%, -50%);
 
@@ -19,6 +20,10 @@
 	}
 
 	& > .item-container {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
 		.title {
 			font-weight: 600;
 			font-size: 1rem;
@@ -27,16 +32,31 @@
 
 		.item-list {
 			display: flex;
+			flex-wrap: wrap;
 			gap: 30px;
 
-			.item {
-				width: 80px;
-				height: 80px;
-				display: grid;
-				place-items: center;
-				border-radius: 10px;
-				box-shadow: -3px -2px 10px rgba(37, 158, 115, 0.25),
-					5px 8px 10px rgba(37, 158, 115, 0.25);
+			.item-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				align-items: center;
+
+				.item {
+					cursor: pointer;
+					width: 80px;
+					height: 80px;
+					display: grid;
+					place-items: center;
+					border-radius: 10px;
+					box-shadow: -3px -2px 10px rgba(37, 158, 115, 0.25),
+						5px 8px 10px rgba(37, 158, 115, 0.25);
+
+					transition: 0.2s;
+
+					&:hover {
+						background-color: rgb(239, 238, 238);
+					}
+				}
 			}
 		}
 	}
