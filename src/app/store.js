@@ -5,6 +5,7 @@ import storage from "redux-persist/lib/storage";
 import taskReducer from "../features/task/taskSlice";
 import activitiesReducer from "../features/activities/activitiesSlice";
 import itemReducer from "../features/item/itemSlice";
+import scoreReducer from "../features/score/scoreSlice";
 
 export const store = configureStore({
 	reducer: {
@@ -28,6 +29,13 @@ export const store = configureStore({
 				storage,
 			},
 			itemReducer
+		),
+		scoreManagement: persistReducer(
+			{
+				key: "scoreManagement",
+				storage,
+			},
+			scoreReducer
 		),
 	},
 });
