@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+=======
+import { useSelector } from 'react-redux';
+>>>>>>> be3ece2bdee40d690f099269a23b462dd79b4065
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton';
+import { selectScore } from '../../features/score/scoreSlice';
 import './AccumulatedPoint.scss';
 import VoucherCard from './VoucherCard/VoucherCard';
 
@@ -21,28 +26,24 @@ const voucherList = [
 ];
 
 export default function AccumulatedPoint() {
+<<<<<<< HEAD
+=======
+  const score = useSelector(selectScore);
+
+>>>>>>> be3ece2bdee40d690f099269a23b462dd79b4065
   return (
     <div className='accumulated-point'>
       <div className='button-group'>
         <h2>
-          Your accumulated point <span>5</span>{' '}
+          Your accumulated point <span>{score || 0}</span>{' '}
         </h2>
         <div>
           <PrimaryButton title='Earn more point' />
         </div>
       </div>
       <div className='voucher-group'>
-        {voucherList.map(({ name, description, score }) => (
-          <div className='container'>
-            <VoucherCard name={name} description={description} />
-            <div className='flow'>
-              <div
-                className='complete'
-                style={{ width: `${(100 * 100) / score}%` }}
-              ></div>
-            </div>
-            <button className='button'>Claim</button>
-          </div>
+        {voucherList.map(({ name, description }) => (
+          <VoucherCard name={name} description={description} />
         ))}
       </div>
     </div>
