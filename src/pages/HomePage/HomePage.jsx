@@ -22,7 +22,7 @@ const HomePage = () => {
 	const location = useLocation();
 
 	useEffect(() => {
-		setTab(location.pathname.slice(-1)[0]);
+		setTab(location.pathname.split("/").slice(-1)[0]);
 	}, [location]);
 
 	function handleSignout() {
@@ -62,7 +62,7 @@ const HomePage = () => {
 							}}
 						/>
 						<TabButton
-							isSelected={tab === ITEM_MANAGEMENT}
+							isSelected={tab === "item"}
 							type="Item"
 							onClick={() => {
 								navigate(ITEM_MANAGEMENT);
@@ -80,9 +80,10 @@ const HomePage = () => {
 				</button>
 			</div>
 			<div className={styles.mainBox}>
-				{/* <div className={styles.header}>
-					<img src={Mylogo} alt="Logo" />
-				</div> */}
+				<div className={styles.header}>
+					{/* <img src={Mylogo} alt="Logo" /> */}
+					<p>App</p>
+				</div>
 				<div className={styles.outlet}>
 					<Outlet />
 				</div>

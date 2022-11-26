@@ -13,6 +13,10 @@ const router = createBrowserRouter([
 				path: "item",
 				element: <ItemPage />,
 			},
+			{
+				path: "suggestion",
+				element: <ItemPage />,
+			},
 		],
 	},
 	{

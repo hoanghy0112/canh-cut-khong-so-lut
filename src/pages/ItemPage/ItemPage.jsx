@@ -1,3 +1,7 @@
 export default function ItemPage() {
-	return <div></div>;
+	return (
+		<div className="container">
+			<p>Hy</p>
+		</div>
+	);
 }
