@@ -1,14 +1,14 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AuthenticationPage from "../pages/AuthenticationPage";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import AuthenticationPage from '../pages/AuthenticationPage';
 // import Info from '../components/UserProfile/Info';
-import HomePage from "../pages/HomePage/HomePage";
-import ItemPage from "../pages/ItemPage/ItemPage";
-import SuggestionPage from "../pages/SuggestionPage/SuggestionPage";
-import UsedPlasticPage from "../pages/UsedPlasticPage/UsedPlasticPage";
+// import HomePage from '../pages/HomePage/HomePage';
+// import ItemPage from '../pages/ItemPage/ItemPage';
+import SuggestionPage from '../pages/SuggestionPage/SuggestionPage';
+// import UsedPlasticPage from '../pages/UsedPlasticPage/UsedPlasticPage';
 
-import QDTestPage from "../pages/QDTstPage";
-import TestPage from "../pages/TestPage_khang/khangTest";
-import SchedulePage from "../pages/SchedulePage/SchedulePage";
+import QDTestPage from '../pages/QDTstPage';
+import TestPage from '../pages/TestPage_khang/khangTest';
+// import SchedulePage from '../pages/SchedulePage/SchedulePage';
 
 const router = createBrowserRouter([
 	{
@@ -44,5 +44,5 @@ const router = createBrowserRouter([
 ]);
 
 export default function MainRouter() {
-	return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 }

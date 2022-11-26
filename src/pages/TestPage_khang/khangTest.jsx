@@ -18,9 +18,9 @@ export default function TestPage() {
   ];
   return (
     <div style={{ padding: 40 }}>
-      {/* <SuggestForDay listSuggest={listSuggest} /> */}
+      <SuggestForDay listSuggest={listSuggest} />
       {/* <Chart /> */}
-      <UserChosen />
+      {/* <UserChosen /> */}
     </div>
   );
 }
