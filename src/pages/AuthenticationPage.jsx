@@ -12,28 +12,16 @@ import LoginButton from '../components/LoginButton/LoginButton';
 import { ICON_FORWARD } from '../assets/icons';
 
 import styles from './AuthenticationPage.module.scss';
+import useAuthenticationNavigation from '../hooks/useRouterNavigation';
+
 import useProfileInformation from '../hooks/useProfileInformation';
 
 export default function AuthenticationPage() {
-  const item = new Item('chen', 100, 'nhua');
-  const material = new Material('nhua', 50);
-  const profile = useProfileInformation();
+  useAuthenticationNavigation();
 
-  useEffect(() => {
-    async function display() {
-      console.log(await item.getPolutionAmount());
-    }
-    display();
-  }, []);
-
-  useEffect(() => {
-    if (profile) {
-      // const uid = profile.uid;
-      // const user = new User(uid);
-      // console.log({ uid });
-      // user.addItem("ly", 50, "nhua");
-    }
-  }, [profile]);
+  function handleSignInWithGoogle() {
+    signInWithGoogle();
+  }
 
   return (
     <div className={styles.container}>

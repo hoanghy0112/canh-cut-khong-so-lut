@@ -1,0 +1,26 @@
+.item-page-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: white;
+	border-top-left-radius: 30px;
+	padding: 30px;
+
+	.button-group {
+		height: 50px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.result-group {
+		display: flex;
+		padding: 90px;
+		height: 100%;
+		overflow-y: scroll;
+
+		.co2-emission {
+		}
+	}
+}
