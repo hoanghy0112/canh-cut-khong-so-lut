@@ -70,6 +70,20 @@ const initialState = {
 			},
 			title: "Cơ sở dữ liệu",
 		},
+		{
+			time: {
+				from: new Date("2022-12-26T13:00:00"),
+				to: new Date("2022-12-26T15:15:00"),
+			},
+			title: "Cơ sở dữ liệu",
+		},
+		{
+			time: {
+				from: new Date("2022-12-25T13:00:00"),
+				to: new Date("2022-12-25T15:15:00"),
+			},
+			title: "Cơ sở dữ liệu",
+		},
 	],
 	status: "idle",
 	error: null,
