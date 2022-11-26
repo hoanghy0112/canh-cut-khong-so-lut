@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectScore, reduceScore } from '../../features/score/scoreSlice';
 import { useState } from 'react';
 import VoucherCard from './VoucherCard/VoucherCard';
+import { ICON_LEAF } from '../../assets/icons';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -70,7 +71,7 @@ export default function AccumulatedPoint() {
     <div className='accumulated-point'>
       <div className='button-group'>
         <h2>
-          Your accumulated point <span>{score}</span>{' '}
+          Your accumulated leaves <span>{score}</span><ICON_LEAF/>{' '}
         </h2>
         <div>
           <PrimaryButton title='Earn more point' onClick={() => navigate('/suggestion')} />

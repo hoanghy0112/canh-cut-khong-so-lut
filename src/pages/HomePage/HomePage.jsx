@@ -66,7 +66,7 @@ const HomePage = () => {
 						/>
 						<TabButton
 							isSelected={tab === "accumulated"}
-							type="Point"
+							type="Gifts"
 							onClick={() => {
 								navigate("/accumulated");
 							}}

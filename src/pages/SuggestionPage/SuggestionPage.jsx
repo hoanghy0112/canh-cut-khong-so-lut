@@ -5,6 +5,7 @@ import SuggestForDay from "../../components/SuggestForDay/SuggestForDay";
 import { useSelector } from "react-redux";
 import { selectMyActivities } from "../../features/activities/activitiesSlice";
 import moment from "moment/moment";
+import { ICON_LEAF } from "../../assets/icons";
 
 const SuggestionPage = () => {
 	const myActivities = useSelector(selectMyActivities);
@@ -26,7 +27,7 @@ const SuggestionPage = () => {
 						<div className={styles.activity}>
 							<p>
 								{title}
-								<span> +{score} score</span>
+								<span> +{score} <ICON_LEAF color="green"/></span>
 							</p>
 							<p>
 								{`${moment(from).format("DD/MM/YYYY HH:mm")} - ${moment(

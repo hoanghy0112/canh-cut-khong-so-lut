@@ -8,6 +8,8 @@ import {
 } from "../../features/activities/activitiesSlice";
 import { addScore } from "../../features/score/scoreSlice";
 
+import { ICON_LEAF } from "../../assets/icons";
+
 const NewsActivities = () => {
 	const dispatch = useDispatch();
 	const news = useSelector(selectAllActivities);
@@ -34,7 +36,7 @@ const NewsActivities = () => {
 								{moment(data.from).format("HH:mm")}-
 								{moment(data.to).format("HH:mm")}
 							</div>
-							<div className={styles.time}>Score: {data.score}</div>
+							<div className={styles.time}>Score: {data.score} <ICON_LEAF color="green"/></div>
 							<div className={styles.organization}>
 								{data.organization}
 							</div>

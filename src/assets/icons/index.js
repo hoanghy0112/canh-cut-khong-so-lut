@@ -12,6 +12,7 @@ import { FaRegFlag } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { TbBottle, TbDiscount2 } from "react-icons/tb";
 import { IoGiftOutline } from "react-icons/io5";
+import {RiLeafFill} from 'react-icons/ri'
 // import { IoSettingsOutline } from 'react-icons/io';
 
 export { default as ICON_HOUSE_1 } from "./house.svg";
@@ -69,3 +70,4 @@ export const ICON_SUGGESTION = AiOutlineGlobal;
 export const ICON_USED = TbBottle;
 export const ICON_POINT = IoGiftOutline;
 export const ICON_VOUCHER = TbDiscount2;
+export const ICON_LEAF = RiLeafFill
