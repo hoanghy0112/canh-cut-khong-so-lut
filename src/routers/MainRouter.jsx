@@ -4,10 +4,11 @@ import AuthenticationPage from '../pages/AuthenticationPage';
 // import HomePage from '../pages/HomePage/HomePage';
 // import ItemPage from '../pages/ItemPage/ItemPage';
 // import SuggestionPage from '../pages/SuggestionPage/SuggestionPage';
+//import SuggestionPage from '../pages/SuggestionPage/SuggestionPage';
 // import UsedPlasticPage from '../pages/UsedPlasticPage/UsedPlasticPage';
 
 import QDTestPage from '../pages/QDTstPage';
-import TestPage from '../pages/TestPage_khang/khangTest';
+//import TestPage from '../pages/TestPage_khang/khangTest';
 // import SchedulePage from '../pages/SchedulePage/SchedulePage';
 
 const router = createBrowserRouter([
