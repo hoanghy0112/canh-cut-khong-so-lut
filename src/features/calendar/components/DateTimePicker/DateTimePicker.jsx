@@ -21,9 +21,9 @@ export default function DateTimePicker({ startDay, hanldeChangeStartDay }) {
   }, [selected]);
 
   function formatDay(date) {
-    const month = date.getMonth() + 1;
-    const weekday = date.getDay();
-    const day = date.getDate();
+    const month = new Date(date).getMonth() + 1;
+    const weekday = new Date(date).getDay();
+    const day = new Date(date).getDate();
     return `${
       weekday !== 0 ? `Thứ ${weekday + 1}` : 'Chủ nhật'
     }, Ngày ${day} Tháng ${month}`;
