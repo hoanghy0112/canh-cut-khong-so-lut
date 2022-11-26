@@ -3,10 +3,10 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 50px;
 	background-color: white;
 	border-top-left-radius: 30px;
-	padding: 30px;
+	padding: 40px 100px;
 
 	.button-group {
 		height: 50px;
@@ -16,12 +16,39 @@
 
 	.result-group {
 		display: flex;
-		padding: 90px;
 		height: 100%;
-		overflow-y: scroll;
 
-		.co2-emission {
-			background-color: red;
+		.left-side {
+			display: flex;
+         flex-direction: column;
+			gap: 50px;
+
+			.co2-emission {
+				width: 250px;
+				height: 110px;
+				border-radius: 20px;
+				background-color: #259e73;
+				color: white;
+				display: grid;
+				place-items: center;
+
+				& > div {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 7px;
+
+					.number {
+						font-weight: 400;
+						font-size: 34px;
+					}
+
+					.unit {
+						font-weight: 400;
+						font-size: 16px;
+					}
+				}
+			}
 		}
 	}
 }

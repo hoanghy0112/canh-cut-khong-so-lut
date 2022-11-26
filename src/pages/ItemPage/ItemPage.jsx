@@ -18,12 +18,25 @@ export default function ItemPage() {
 				/>
 			</div>
 			<div className="result-group">
-				<ResultCard title={"The emission of CO2"}>
-					<div className="co2-emission">
-						<p className="number">500g</p>
-						<p className="unit">CO2</p>
-					</div>
-				</ResultCard>
+				<div className="left-side">
+					<ResultCard title={"The emission of CO2"}>
+						<div className="co2-emission">
+							<div>
+								<p className="number">500g</p>
+								<p className="unit">CO2</p>
+							</div>
+						</div>
+					</ResultCard>
+					<ResultCard title={"The emission of CO2"}>
+						<div className="co2-emission">
+							<div>
+								<p className="number">500g</p>
+								<p className="unit">CO2</p>
+							</div>
+						</div>
+					</ResultCard>
+				</div>
+				<div className="right-side"></div>
 			</div>
 			<CenteredModal
 				isOpen={isAddItemModalVisible}

@@ -6,6 +6,7 @@ interface IProfile {
 	displayName?: string | null;
 	email?: string | null;
 	uid?: string | null;
+	accessToken?: string | null;
 	isPending: boolean;
 	isAuthenticated: boolean;
 }
@@ -18,14 +19,16 @@ export default function useProfileInformation() {
 
 	useEffect(() => {
 		const auth = getAuth();
-		const unsubscribe = onAuthStateChanged(auth, (user) => {
+		const unsubscribe = onAuthStateChanged(auth, async (user) => {
 			if (user) {
 				const { photoURL, displayName, email, uid } = user;
+				const accessToken = await auth.currentUser?.getIdToken();
 				setProfile({
 					photoURL,
 					displayName,
 					email,
 					uid,
+					accessToken,
 					isPending: false,
 					isAuthenticated: true,
 				});
