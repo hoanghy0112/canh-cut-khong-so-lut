@@ -1,0 +1,14 @@
+.result-card-container {
+	display: grid;
+	gap: 10px;
+
+	.title {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 27px;
+		color: #259e73;
+	}
+
+	.inner-card {
+	}
+}
