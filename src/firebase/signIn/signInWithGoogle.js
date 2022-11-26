@@ -1,5 +1,6 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import app from "../config";
+import { User } from "../model/User";
 
 const provider = new GoogleAuthProvider();
 
@@ -10,6 +11,9 @@ export default function signInWithGoogle() {
 		signInWithPopup(auth, provider).then((result) => {
 			// const credential = GoogleAuthProvider.credentialFromResult(result);
 			const { user } = result;
+
+			const newUser = new User(user.uid);
+			newUser.saveToFirestore();
 
 			resolve(user);
 		});

@@ -7,11 +7,18 @@ export class Item {
 	name: string;
 	material: string;
 	weight: number;
+	date: Date;
 
-	constructor(name: string, weight: number, material: string) {
+	constructor(
+		name: string,
+		weight: number,
+		material: string,
+		date: Date = new Date()
+	) {
 		this.name = name;
 		this.weight = weight;
 		this.material = material;
+		this.date = date;
 	}
 
 	async saveToFirestore(collection: string = ITEMS) {
@@ -38,10 +45,11 @@ export const itemConverter = {
 			name: item.name,
 			weight: item.weight,
 			material: item.material,
+			date: item.date,
 		};
 	},
 	fromFirestore: (snapshot, options) => {
 		const data = snapshot.data(options);
-		return new Item(data.name, data.weight, data.material);
+		return new Item(data.name, data.weight, data.material, data.date);
 	},
 };

@@ -7,9 +7,13 @@ import signInWithGoogle from "../firebase/signIn/signInWithGoogle";
 import { Item } from "../firebase/model/Item";
 import { Material } from "../firebase/model/Material";
 
+import useProfileInformation from "../hooks/useProfileInformation";
+import { User } from "../firebase/model/User";
+
 export default function AuthenticationPage() {
 	const item = new Item("chen", 100, "nhua");
 	const material = new Material("nhua", 50);
+	const profile = useProfileInformation();
 
 	useEffect(() => {
 		async function display() {
@@ -17,6 +21,15 @@ export default function AuthenticationPage() {
 		}
 		display();
 	}, []);
+
+	useEffect(() => {
+		if (profile) {
+			// const uid = profile.uid;
+			// const user = new User(uid);
+			// console.log({ uid });
+			// user.addItem("ly", 50, "nhua");
+		}
+	}, [profile]);
 
 	return (
 		<>
