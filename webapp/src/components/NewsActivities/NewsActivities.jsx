@@ -20,7 +20,6 @@ const NewsActivities = () => {
 	const myActivities = useSelector(selectMyActivities);
 
 	function handleClick(data) {
-		console.log({ myActivities, data });
 		if (
 			myActivities.indexOf(
 				myActivities.find((act) => act.title == data.title)
@@ -71,7 +70,7 @@ const NewsActivities = () => {
 					);
 				})}
 			<NotifyModal
-				title="Bạn đã đăng ký tham gia sự kiện này thành công"
+				title="Bạn đã đăng ký tham gia sự kiện này"
 				isOpen={isOpen}
 			></NotifyModal>
 		</>
