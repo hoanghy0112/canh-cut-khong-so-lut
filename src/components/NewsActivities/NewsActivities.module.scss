@@ -56,4 +56,24 @@
       height: 100%;
     }
   }
+
+  .join {
+    margin: 0 auto;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 40px;
+    background-color: rgb(4, 80, 35);
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #04be33;
+    }
+  }
+  .time {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
