@@ -14,9 +14,9 @@ export const store = configureStore({
 			},
 			taskReducer
 		),
-		activities: persistReducer(
+		activitiesManagement: persistReducer(
 			{
-				key: "activities",
+				key: "activitiesManagement",
 				storage,
 			},
 			activitiesReducer
@@ -25,3 +25,10 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+// export default configureStore({
+// 	reducer: {
+// 	  tasks: taskReducer,
+// 	  activities: activitiesReducer
+// 	}
+//   })
