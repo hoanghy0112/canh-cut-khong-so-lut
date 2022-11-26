@@ -9,15 +9,28 @@ const initialState = {
 	error: null,
 };
 
-export const tasksManagementSclice = createSlice({
+export const tasksManagementSlice = createSlice({
 	name: "tasksManagement",
 	initialState,
+	reducers: {
+		createNewTask: (state, payload) => {
+			console.log({ payload });
+		},
+		changeTask: (state, payload) => {
+			console.log({ payload });
+		},
+		deleteTask: (state, payload) => {
+			console.log({ payload });
+		},
+	},
 });
+
+export const { changeTask, createNewTask, deleteTask } =
+	tasksManagementSlice.actions;
 
 export const selectAllTasks = (state) => state.tasksManagement.listTasks;
 export const selectCurrentWeekTasks = (startDate) =>
 	function (state) {
-		// console.log({ startDate });
 		const tasks = state.tasksManagement.listTasks.filter((task) => {
 			const diff = moment(new Date(task.time.from)).diff(
 				new Date(startDate),
@@ -25,7 +38,6 @@ export const selectCurrentWeekTasks = (startDate) =>
 			);
 			return diff >= 0 && diff < 7;
 		});
-		// console.log({ tasks });
 		return tasks;
 	};
 
@@ -33,4 +45,4 @@ export const selectTasksStatus = (state) => state.tasksManagement.status;
 
 export const selectTasksError = (state) => state.tasksManagement.error;
 
-export default tasksManagementSclice.reducer;
+export default tasksManagementSlice.reducer;
